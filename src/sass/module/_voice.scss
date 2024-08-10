@@ -1,0 +1,59 @@
+@use "global" as *;
+
+
+.voice {
+    @include mq(md){
+        position: relative;
+    }
+}
+
+.voice__inner {
+    max-width: rem(1130);
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    margin-inline: auto;
+    @include mq(md){
+       padding-left: $padding-pc;
+       padding-right: $padding-pc;
+    }
+}
+
+.voice__img-fish {
+    @include mq(md){
+        position: absolute;
+        top: rem(-120);
+        left: calc(50% - min(50vw,621px));
+        width: rem(301);
+        height: auto;
+    }
+}
+
+.voice__img-tatunootoshigo {
+    @include mq(md){
+        position: absolute;
+        bottom: rem(-71);
+        right: calc(50% - min(50vw,540px));
+        width: rem(71);
+        height: auto;
+    }
+}
+
+.voice__contents {
+    display: grid;
+    gap: rem(38);
+    margin-top: rem(44);
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    @include mq(md){
+        margin-top: rem(30);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.voice__btn {
+    margin-top: rem(39);
+    @include mq(md){
+        margin-top: rem(81);
+    }
+}
+

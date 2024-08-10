@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.footer-nav {
+    display: flex;
+}
+
+.footer-nav__container+.footer-nav__container {
+    margin-left: rem(120);
+}
+
+.footer-nav__flex {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(md) {
+        flex-direction: initial;
+        padding-bottom: rem(40);
+        gap: rem(117);
+    }
+}
+
+.footer-nav__flex:not(:first-child) {
+    @include mq(md) {
+        margin-left: rem(112);
+    }
+}
+
+.footer-nav__group:first-child {
+    width: rem(168);
+
+    @include mq(md) {
+        width: auto;
+    }
+}
+
+.footer-nav__container {
+    flex-grow: 1;
+}
+
+.footer-nav__container:not(:first-child) {
+    margin-left: rem(16);
+
+    @include mq(md) {
+        margin-left: rem(47.5);
+    }
+}
+
+.footer-nav__wrapper {
+    padding-bottom: rem(40);
+}
+
+.footer-nav__title {
+    position: relative;
+    font-family: $base-font-family;
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: calc(18/16);
+    color: $white;
+    display: flex;
+    flex-grow: 1;
+    transition: opacity 0.4s;
+}
+
+.footer-nav__title:hover {
+    opacity: 0.7;
+}
+
+.footer-nav__title::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/hitode.png);
+    width: rem(18);
+    height: rem(18);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.footer-nav__title a {
+    margin-left: rem(4);
+    flex-grow: 1;
+}
+
+.footer-nav__lists {
+    margin-left: rem(23);
+}
+
+.footer-nav__list {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(16);
+    line-height: calc(18/16);
+    color: $white;
+    margin-top: rem(24);
+    transition: opacity 0.4s;
+}
+
+.footer-nav__list:hover {
+    opacity: 0.7;
+}

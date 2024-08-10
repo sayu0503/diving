@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.contact {
+    text-align: center;
+    margin-top: rem(42);
+    width: 100%;
+    @include mq(md){
+        padding-left: 0;
+        margin-top: rem(20);
+        flex-grow: 1;
+        width: 30%;
+        text-align: left;
+    }
+}
+
+.contact__inner {
+    @include mq(md){
+        padding-right: rem(30);
+    }
+}
+
+.contact__text {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(14);
+    line-height: calc(18/14);
+    color: $green-accent;
+    margin-top: rem(8);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include mq(md){
+        text-align: center;
+        margin-top: rem(9);
+        text-shadow: none;
+    }
+}
+
+.contact__btn {
+    margin-top: rem(41);
+    text-align: justify;
+}
+
+.contact__section-header {
+    text-align: center;
+}
+
+.contact__section-header-title {
+    font-family: $third-font-family;
+    font-weight: $regular;
+    font-size: rem(80);
+    line-height: 1;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: $green;
+    @include mq(md){
+    font-size: rem(80);
+    text-shadow: none;
+    }
+}
+
+.contact__section-header-title::first-letter {
+    color: $green-accent;
+}
+
+.contact__section-header-subtitle {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(12);
+    line-height: calc(18/12);
+    color: $green-accent;
+    margin-top: rem(-6);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include mq(md){
+        margin-top: rem(-4);
+        letter-spacing: 0.05em;
+        text-shadow: none;
+    }
+}
