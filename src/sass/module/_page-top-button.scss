@@ -8,6 +8,10 @@
      width: rem(48);
      height: rem(48);
      cursor: pointer;
+     background-color: $white;
+     border: rem(1) solid $green-accent;
+     border-radius: rem(90);
+     filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2));
      @include mq(md){
          width: rem(80);
          height: rem(80);
@@ -15,3 +19,19 @@
      }
 }
 
+.page-top-button::after {
+    position: absolute;
+    top: 28%;
+    left: 37%;
+    width: rem(6);
+    height: rem(28);
+    border-right: rem(1) solid $green-accent;
+    border-top: rem(1) solid $green-accent;
+    transform: skewY(-45deg);
+    content: "";
+    @include mq(md){
+        height: rem(40);
+        width: rem(10);
+        left: 40%;
+    }
+}
