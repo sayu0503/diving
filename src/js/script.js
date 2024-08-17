@@ -86,11 +86,12 @@ $(".js-hamburger").click(function () {
 
 //スクロールイベントでページトップボタンを表示/非表示
 $(function() {
+  $(".js-page-top").hide();
   $(window).on("scroll", function() {
-      if ($(this).scrollTop() > 20) {
-          $(".js-page-top").fadeIn(300);
+      if ($(this).scrollTop() > 100) {
+          $(".js-page-top").fadeIn();
           } else {
-          $(".js-page-top").fadeOut(300);
+          $(".js-page-top").fadeOut();
       }
 
       const scrollHeight = $(document).height();/*ページ全体の高さ*/
@@ -109,7 +110,10 @@ $(function() {
           });
       }
   });
-
+   // ページトップに戻る処理を追加
+   $(".js-page-top").on("click", function() {
+    $("html, body").animate({ scrollTop: 0 }, 300);
+});
 });
 
   //背景色の後に画像やテキストが表示されるエフェクト
