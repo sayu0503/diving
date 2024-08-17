@@ -88,7 +88,7 @@ $(".js-hamburger").click(function () {
 $(function() {
   $(".js-page-top").hide();
   $(window).on("scroll", function() {
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 70) {
           $(".js-page-top").fadeIn();
           } else {
           $(".js-page-top").fadeOut();
