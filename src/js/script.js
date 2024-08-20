@@ -57,19 +57,18 @@ $(".js-hamburger").click(function () {
    var swiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: 1.01,
     spaceBetween: 24,
-     autoplay: {
-       delay: 3000,
-     },
-     speed: 1500,
-    loop: true,
-    centeredSlides: true,
+    loop:true,
     width: 280,
-    breakpoints: {
+    speed: 2000,
+     autoplay: {
+       delay: 1,
+       disableOnInteraction: false,
+     },
+     breakpoints: {
       // 768px以上の場合
       768: {
        slidesPerView: 3.5,
        spaceBetween: 40,
-       centeredSlides: false,
        width: 1265.5,
       }
     },

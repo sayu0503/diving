@@ -73,7 +73,7 @@
 .about__image3 {
     position: absolute;
     @include mq(md){
-        right: calc(50% - min(50vw,638px));
+        right: calc(50% - min(48vw,638px));
         bottom: rem(18);
         width: rem(194);
         z-index: 9;

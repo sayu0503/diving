@@ -36,7 +36,7 @@
     @include mq(md){
         position: absolute;
         top: rem(24);
-        left: calc(50% - min(50vw,621px));
+        left: calc(50% - min(48vw,621px));
         width: rem(437);
         height: auto;
     }

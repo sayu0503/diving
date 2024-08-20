@@ -25,13 +25,14 @@
     text-transform: uppercase;
     font-family: $fourth-font-family;
     font-size: rem(40);
-    font-weight: $regular;
+    font-weight: $normal;
     line-height: calc(48/40);
     letter-spacing: 0.54em;
     color: $white;
     @include mq(md){
         font-size: rem(80);
         line-height: calc(100/80);
+        margin-left: 3%;
     }
 }
 

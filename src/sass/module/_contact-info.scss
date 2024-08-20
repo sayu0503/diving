@@ -19,10 +19,10 @@
     position: absolute;
     width: rem(109);
     top: rem(-27);
-    right: calc(50% - min(50vw,172px));
+    right: calc(50% - min(48vw,172px));
     @include mq(md){
         top: rem(-43);
-        right: calc(50% - min(50vw,670px));
+        right: calc(50% - min(48vw,670px));
         width: rem(301);
         height: auto;
     }
