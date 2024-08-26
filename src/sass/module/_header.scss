@@ -4,6 +4,10 @@
     background-color: #9A9A9A;
 }
 
+.header.is-open {
+    background-color: $green-accent;
+}
+
 .header {
     height: rem(80);
     background-color: rgba($green, $alpha: 0.68);
@@ -14,6 +18,7 @@
     top: 0;
     left: 0;
     right: 0;
+    transition: background-color 0.3s ease;
     @include mq(md){
         height: rem(90);
     }
@@ -27,7 +32,7 @@
     padding: 0 rem(13);
     @include mq(md){
         padding-left: rem(36);
-        padding-right: rem(22);
+        padding-right: rem(41);
     }
 }
 

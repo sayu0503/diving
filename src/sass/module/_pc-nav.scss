@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: rem(40);
  }
 
 .pc-nav__item {
@@ -20,12 +21,12 @@
     font-weight: $regular;
     font-size: rem(18);
     color: $white;
-    padding-left: rem(20);
-    padding-right: rem(20);
-    padding-top: rem(25);
-    padding-bottom: rem(25);
+    padding: 0;
     line-height: calc(18/18);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .pc-nav__link:hover {
@@ -36,8 +37,7 @@
     content: "";
     position: absolute;
     bottom: rem(20);
-    left: 10%;
-    width: 80%;
+    width: 100%;
     height: rem(2);
     background: $white;
     transition: all .3s;

@@ -22,13 +22,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+  <!--swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
   <!-- css -->
-  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./assets/css/style.css" />
+
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="./assets/js/jquery.inview.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
@@ -364,26 +368,36 @@
           <p class="section-header__title">About&nbsp;us</p>
           <h2 class="section-header__subtitle">私たちについて</h2>
         </div>
-      </div>
-      <div class="about__body">
-        <div class="about__body-inner">
-            <div class="about__image-container">
-              <img src="./assets/images/common/about_img_1.jpg" alt="瓦屋根の上のシーサー" class="about__image1">
-              <img src="./assets/images/common/about_img_2.jpg" alt="黄色い二匹の魚が泳いでいる様子" class="about__image2">
-              <img src="./assets/images/common/sango.png" alt="サンゴの挿絵" class="about__image3 u-desktop">
-            </div>
-            <div class="about__text-group">
-              <p class="about__title">Dive into<br>the Ocean</p>
-                <div class="about__group">
-                 <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span class="about__sp-visibility">が入ります。</span></p>
-                  <div class="about__btn">
-                 <a href="#" class="button slide"><span>View&nbsp;more</span></a>
-                </div>
-             </div>
-            </div>
+        <div class="about__body">
+              <div class="about__image-container">
+                <picture>
+                  <source srcset="./assets/images/common/about_img_2.jpg" alt="黄色い二匹の魚が泳いでいる様子" media="(min-width: 768px)">
+                  <img src="./assets/images/common/about_img_2-sp.jpg" alt="黄色い二匹の魚が泳いでいる様子">
+                 </picture>
+              </div>
+              <div class="about__image-container-sub">
+               <picture>
+                 <source srcset="./assets/images/common/about_img_1-sp.jpg" alt="瓦屋根の上のシーサー" media="(min-width: 768px)">
+                 <img src="./assets/images/common/about_img_1.jpg" alt="瓦屋根の上のシーサー">
+               </picture>
+              </div>
+              <div class="about__text-group">
+                <p class="about__title">Dive into<br>the Ocean</p>
+                  <div class="about__group">
+                   <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span class="about__sp-visibility">が入ります。</span></p>
+                    <div class="about__btn">
+                   <a href="#" class="button slide"><span>View&nbsp;more</span></a>
+                  </div>
+               </div>
+              </div>
+               <img src="./assets/images/common/sango.png" alt="サンゴの挿絵" class="about__image3 u-desktop">
         </div>
+
+
+
       </div>
+      
     </section>
 
      <!--information-->

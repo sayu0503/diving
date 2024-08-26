@@ -55,9 +55,10 @@
 
 .access__text-group {
     @include mq(md){
-        width: rem(160);
+       min-width: rem(146);
     }
 }
+
 .access__container {
     margin-top: rem(15);
     @include mq(md){

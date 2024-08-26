@@ -29,10 +29,10 @@
     line-height: calc(48/40);
     letter-spacing: 0.54em;
     color: $white;
+    text-indent: 0.5em;
     @include mq(md){
         font-size: rem(80);
         line-height: calc(100/80);
-        margin-left: 3%;
     }
 }
 

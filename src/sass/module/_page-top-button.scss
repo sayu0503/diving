@@ -21,8 +21,8 @@
 
 .page-top-button::after {
     position: absolute;
-    top: 28%;
-    left: 37%;
+    top: 26%;
+    left: 40%;
     width: rem(6);
     height: rem(28);
     border-right: rem(1) solid $green-accent;
@@ -33,5 +33,6 @@
         height: rem(40);
         width: rem(10);
         left: 40%;
+        top: 28%;
     }
 }

@@ -12,6 +12,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+  //ドロワーを開いた時にヘッダーの背景色を変える
+  $('#drawerToggle').on('click', function() {
+    $('body').toggleClass('is-open');
+});
+
   //PC幅にしたときハンバーガーメニュードロワーを閉じる
   $(window).resize(function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
@@ -54,33 +59,33 @@ $(".js-hamburger").click(function () {
     });
 
    //Campaignスライド
-   var swiper = new Swiper(".js-campaign-swiper", {
-    slidesPerView: 1.01,
-    spaceBetween: 24,
-    loop:true,
-    width: 280,
-    speed: 2000,
-     autoplay: {
-       delay: 1,
-       disableOnInteraction: false,
+    var swiper = new Swiper(".js-campaign-swiper", {
+     slidesPerView: 1.01,
+     spaceBetween: 24,
+     loop:true,
+     width: 280,
+     speed: 1500,
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+       // 768px以上の場合
+       768: {
+        slidesPerView: 3.5,
+        spaceBetween: 40,
+        width: 1265,
+       }
      },
-     breakpoints: {
-      // 768px以上の場合
-      768: {
-       slidesPerView: 3.5,
-       spaceBetween: 40,
-       width: 1265.5,
-      }
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+     pagination: {
+       el: ".swiper-pagination",
+       type: "fraction",
+     },
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+   });
 });
 
 //スクロールイベントでページトップボタンを表示/非表示

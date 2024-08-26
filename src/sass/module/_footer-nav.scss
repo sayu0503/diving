@@ -11,10 +11,8 @@
 .footer-nav__flex {
     display: flex;
     flex-direction: column;
-
     @include mq(md) {
         flex-direction: initial;
-        padding-bottom: rem(40);
         gap: rem(117);
     }
 }
@@ -47,6 +45,13 @@
 
 .footer-nav__wrapper {
     padding-bottom: rem(40);
+}
+
+.footer-nav__wrapper:last-child {
+    padding-bottom: rem(40);
+    @include mq(md){
+        padding-bottom: 0;
+    }
 }
 
 .footer-nav__title {
