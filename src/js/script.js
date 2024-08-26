@@ -6,24 +6,23 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
+      $(".header").removeClass("is-open");
   } else{
   $(".js-hamburger").addClass("is-active");
   $(".js-sp-nav").fadeIn(300);
+  $(".header").addClass("is-open");
     }
   });
 
-  //ドロワーを開いた時にヘッダーの背景色を変える
-  $('#drawerToggle').on('click', function() {
-    $('body').toggleClass('is-open');
-});
-
-  //PC幅にしたときハンバーガーメニュードロワーを閉じる
+  //PC幅にしたときハンバーガーメニューとドロワーを閉じる
   $(window).resize(function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
       $(".js-hamburger").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
+      $(".header").removeClass("is-open");
     }
 });
+
 //ハンバーガーメニュー展開時背景をスクロールさせない方法
 $(".js-hamburger").click(function () {
   if ($("body").css("overflow") === "hidden") {
@@ -146,5 +145,3 @@ $(function() {
         }
    });
   });
-
-  
