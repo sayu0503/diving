@@ -20,6 +20,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".js-hamburger").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
       $(".header").removeClass("is-open");
+      $("body").css({ height: "", overflow: "" });
     }
 });
 
