@@ -20,39 +20,32 @@
         }
     }
 
-.inner.blog__inner {
-    max-width: rem(600);
-    padding-left: $padding-sp;
-    padding-right: $padding-sp;
-    margin-inline: auto;
+.blog:after {
     @include mq(md){
-        max-width: rem(1130);
-        padding-left: $padding-pc;
-        padding-right: $padding-pc;
-    }
-}
-
-.blog__img {
-    @include mq(md){
+        content: "";
+        display: block;
+        background-image: url(../images/common/fish.png);
         position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: calc(50% - min(48vw,rem(621)));
         top: rem(24);
-        left: calc(50% - min(48vw,621px));
         width: rem(437);
-        height: auto;
+        height: rem(201);
     }
 }
 
-.blog__contents {
-    margin-top: rem(27);
-    display: grid;
-    gap: rem(40);
-    grid-template-columns: repeat(1,1fr);
-    place-items: center;
-    @include mq(md){
-        grid-template-columns: repeat(3,1fr);
-        margin-top: rem(82);
-    }
-}
+ .blog__contents {
+     margin-top: rem(27);
+     display: grid;
+     gap: rem(40);
+     grid-template-columns: repeat(1,1fr);
+     place-items: center;
+     @include mq(md){
+         grid-template-columns: repeat(3,1fr);
+         margin-top: rem(82);
+     }
+ }
 
 .blog__btn {
     margin-top: rem(38);

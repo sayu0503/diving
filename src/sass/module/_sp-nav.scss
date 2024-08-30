@@ -10,7 +10,6 @@
     height: 100vh;
     background-color: $green-accent;
     margin-top: rem(80);
-    overflow: scroll;
 }
 
 .sp-nav.is-active {
@@ -21,6 +20,9 @@
     padding-right: rem(15);
     padding-left: rem(15);
     display: flex;
+    overflow-y: scroll;
+    height: calc(100vh - 5rem);
+    padding-bottom: 3rem;
 }
 
 .sp-nav__flex {
@@ -37,7 +39,11 @@
 }
 
 .sp-nav__wrapper {
-    padding-bottom: rem(40);
+   margin-top: rem(40);
+}
+
+.sp-nav__wrapper:not(:first-child) {
+    
 }
 
 .sp-nav__title {

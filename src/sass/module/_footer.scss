@@ -4,15 +4,8 @@
     position: relative;
 }
 
-.footer__inner {
-    padding-right: $padding-sp;
-    padding-left: $padding-sp;
-    @include mq(md){
-        max-width: rem(1130);
-        margin-inline: auto;
-        padding-right: $padding-pc;
-        padding-left: $padding-pc;
-    }
+.footer__wrapper {
+    margin-inline: auto;
 }
 
 .footer__container {

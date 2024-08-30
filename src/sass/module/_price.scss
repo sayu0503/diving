@@ -4,31 +4,24 @@
     padding: rem(80) 0 rem(85);
     background-color: $green2;
     @include mq(md){
+        position: relative;
         padding: rem(100) 0 rem(105);
     }
 }
 
-.price__inner {
-    max-width: rem(600);
-    padding-left: $padding-sp;
-    padding-right: $padding-sp;
-    margin-inline: auto;
+.price:after {
     @include mq(md){
-        max-width: rem(1130);
-        padding-left: $padding-pc;
-        padding-right: $padding-pc;
-        position: relative;
-    }
-}
-
-.price__img-fish {
-    @include mq(md){
+        content: "";
         position: absolute;
-        bottom: rem(-44);
+        display: block;
+        background-image: url(../images/common/fish_3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: rem(60);
         left: rem(100);
         width: rem(437);
-        height: auto;
-        left: calc(50% - min(48vw,619px));
+        height: rem(201);
+        left: calc(50% - min(48vw,rem(619)));
     }
 }
 

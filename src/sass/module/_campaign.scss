@@ -10,15 +10,6 @@
    }
 }
 
-.inner.campaign__inner {
-    padding-left: $padding-sp;
-    padding-right: $padding-sp;
-    @include mq(md){
-        padding-left: $padding-pc;
-        padding-right: $padding-pc;
-    }
-}
-
 .campaign__btn {
     margin-top: rem(31);
     @include mq(md){

@@ -44,13 +44,12 @@
 }
 
 .footer-nav__wrapper {
-    padding-bottom: rem(40);
+    margin-top: rem(40);
 }
 
-.footer-nav__wrapper:last-child {
-    padding-bottom: rem(40);
+.footer-nav__wrapper:first-child {
     @include mq(md){
-        padding-bottom: 0;
+        margin-top: 0;
     }
 }
 

@@ -1,22 +1,29 @@
 @use "global" as *;
 
-.about__inner {
-    max-width: rem(600);
-    padding-left: $padding-sp;
-    padding-right: $padding-sp;
-    margin-inline: auto;
-    @include mq(md){
-        max-width: rem(1130);
-        padding-left: $padding-pc;
-        padding-right: $padding-pc;
-    }
-}
-
 .about__body {
     position: relative;
     margin-top: rem(30);
+    max-width: rem(600);
+    margin-inline: auto;
     @include mq(md){
+        max-width: 100%;
         margin-top: rem(40);
+    }
+}
+
+.about__body:after {
+    @include mq(md){
+        content: "";
+        display: block;
+        background-image: url(../images/common/sango.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+         right: calc(50% - min(48vw,rem(638)));
+         bottom: rem(-94);
+         width: rem(194);
+         height: rem(181);
+         z-index: 9;
     }
 }
 
@@ -26,7 +33,7 @@
      max-width: rem(600);
      margin-left: auto;
      @include mq(md){
-        max-width: rem(880);
+        max-width: 82%;
         padding-top: rem(80);
     }
  }
