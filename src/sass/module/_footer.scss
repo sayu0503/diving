@@ -51,7 +51,10 @@
 
 .footer__copyright {
     text-align: center;
-    margin-top: rem(80);
+    margin-top: rem(34);
+    @include mq(md) {
+        margin-top: rem(77);
+    }
 }
 
 .footer__copyright small{
