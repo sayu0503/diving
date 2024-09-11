@@ -4,7 +4,6 @@
     text-align: center;
     @include mq(md){
         width: 53%;
-        padding-left: rem(40);
         padding-right: rem(70);
         border-right: rem(1) solid $green-accent;
     }

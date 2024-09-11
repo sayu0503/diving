@@ -34,7 +34,11 @@
 .price__contents {
     display: flex;
     flex-direction: column-reverse;
+    max-width: rem(600);
+    margin-inline: auto;
     @include mq(md){
+        max-width: initial;
+        gap: rem(96);
         width: 100%;
         flex-direction: row;
         margin-top: rem(40);
@@ -99,7 +103,6 @@
     margin-inline: auto;
     @include mq(md){
         margin-top: 0;
-        margin-left: rem(93);
     }
 }
 

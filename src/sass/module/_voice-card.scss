@@ -52,9 +52,6 @@
     font-size: rem(12);
     line-height: calc(18/12);
     color: $green;
-    @include mq(md){
-        line-height: 2;
-    }
 }
 
 .voice-card__label {

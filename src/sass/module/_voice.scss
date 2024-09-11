@@ -44,7 +44,7 @@
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     @include mq(md){
-        margin-top: rem(30);
+        margin-top: rem(35);
         grid-template-columns: repeat(2, 1fr);
     }
 }
