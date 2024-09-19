@@ -34,7 +34,7 @@ $(".js-hamburger").click(function () {
 });
 
   //メインビュースライド
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".js-mv-swiper", {
       loop: true,
       effect: "fade",
       speed: 3000,
