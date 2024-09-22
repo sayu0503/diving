@@ -68,3 +68,10 @@
         line-height: calc(14/18);
     }
 }
+
+.footer__nav-layout {
+    margin-top: rem(39);
+    @include mq(md){
+        margin-top: rem(23);
+    }
+}

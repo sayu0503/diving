@@ -222,7 +222,7 @@
       </nav>
   </div>
   </header>
-  
+
   <main>
 <!-- メインビュー -->
     <div class="mv" id="js-mv">
@@ -272,7 +272,7 @@
         <div class="campaign__container">
         <div class="swiper js-campaign-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide-2">
+            <div class="swiper-slide campaign__slide">
               <div href="#" class="campaign-card">
                 <figure class="campaign-card__img">
                   <img src="./assets/images/common/campaign_img_1.jpg" alt="色鮮やかな魚の群れ">
@@ -292,7 +292,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide slide-2">
+            <div class="swiper-slide campaign__slide">
               <div href="#" class="campaign-card">
                 <figure class="campaign-card__img">
                   <img src="./assets/images/common/campaign_img_2.jpg" alt="エメラルドグリーンの海と船">
@@ -312,7 +312,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide slide-2">
+            <div class="swiper-slide campaign__slide">
               <div href="#" class="campaign-card">
                 <figure class="campaign-card__img">
                   <img src="./assets/images/common/campaign_img_3.jpg" alt="クラゲの群れ">
@@ -332,7 +332,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide slide-2">
+            <div class="swiper-slide campaign__slide">
               <div href="#" class="campaign-card">
                 <figure class="campaign-card__img">
                   <img src="./assets/images/common/campaign_img_4.jpg" alt="ダイビング">
@@ -429,8 +429,8 @@
           <p class="section-header__title section-header__title--white">Blog</p>
           <h2 class="section-header__subtitle section-header__subtitle--white">ブログ</h2>
         </div>
-        <div class="blog__contents">
-          <a href="#" class="blog-card">
+        <div class="blog__contents blog-cards">
+          <a href="#" class="blog-cards__item blog-card">
             <figure class="blog-card__img">
               <img src="./assets/images/common/blog_img_1.jpg" alt="ピンク色のサンゴ礁">
             </figure>
@@ -441,7 +441,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </a>
-          <a href="#" class="blog-card">
+          <a href="#" class="blog-cards__item blog-card">
             <figure class="blog-card__img">
               <img src="./assets/images/common/blog_img_2.jpg" alt="ウミガメが泳いでいる様子">
             </figure>
@@ -452,7 +452,7 @@
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </a>
-          <a href="#" class="blog-card">
+          <a href="#" class="blog-cards__item blog-card">
             <figure class="blog-card__img">
               <img src="./assets/images/common/blog_img_3.jpg" alt="カクレクマノミがイソギンチャクに隠れている様子">
             </figure>
@@ -477,8 +477,8 @@
         <p class="section-header__title">Voice</p>
         <h2 class="section-header__subtitle">お客様の声</h2>
       </div>
-      <div class="voice__contents">
-        <a href="#" class="voice-card">
+      <div class="voice__contents voice-cards">
+        <a href="#" class="voice-cards__item voice-card">
           <div class="voice-card__body">
             <div class="voice-card__container">
               <div class="voice-card__wrap">
@@ -501,7 +501,7 @@
               ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </a>
-        <a href="#" class="voice-card">
+        <a href="#" class="voice-cards__item voice-card">
           <div class="voice-card__body">
             <div class="voice-card__container">
               <div class="voice-card__wrap">
@@ -619,38 +619,36 @@
    </section>
 
    <!-- Contact -->
-    <section class="top-contact-info contact-info">
+    <section class="top-contact contact">
       <div class="inner">
-        <div class="contact-info__contents">
-          <div class="access">
-            <div class="access__inner">
-            <div class="access__title">
+        <div class="contact__contents">
+          <div class="contact__info">
+            <div class="contact__info-inner">
+            <div class="contact__info-title">
               <img src="./assets/images/common/logo-green.svg" alt="CodeUps">
             </div>
-            <div class="access__container">
-              <div class="access__text-group">
-                <p class="access__text">沖縄県那覇市1-1</p>
-                <p class="access__text">TEL:0120-000-0000</p>
-                <p class="access__text">営業時間:8:30-19:00</p>
-                <p class="access__text">定休日:毎週火曜日</p>
+            <div class="contact__info-container">
+              <div class="contact__info-text-group">
+                <p class="contact__info-text">沖縄県那覇市1-1</p>
+                <p class="contact__info-text">TEL:0120-000-0000</p>
+                <p class="contact__info-text">営業時間:8:30-19:00</p>
+                <p class="contact__info-text">定休日:毎週火曜日</p>
               </div>
-              <div class="access__map">
+              <div class="contact__info-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1927241401213!2d127.69486729999998!3d26.22292675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5696278d6553b%3A0xcb44277c653ed00b!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yR5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1718518289231!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
           </div>
-          <div class="contact">
-            <div class="contact__inner">
-                <div class="contact__section-header">
-                  <p class="contact__section-header-title">Contact</p>
-                  <h2 class="contact__section-header-subtitle">お問い合わせ</h2>
+          <div class="contact__column">
+                <div class="contact__column-section-header">
+                  <p class="contact__column-section-header-title">Contact</p>
+                  <h2 class="contact__column-section-header-subtitle">お問い合わせ</h2>
                 </div>
-              <div class="contact__text">ご予約・お問い合わせはコチラ</div>
-              <div class="contact__btn">
+              <div class="contact__column-text">ご予約・お問い合わせはコチラ</div>
+              <div class="contact__column-btn">
                 <a href="#" class="button slide"><span>Contact us</span></a>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -673,7 +671,7 @@
           </a>
         </div>
       </div>
-      <nav class="top-footer-nav footer-nav">
+      <nav class="footer__nav-layout footer-nav">
         <div class="footer-nav__contents">
         <div class="footer-nav__container">
           <div class="footer-nav__flex">

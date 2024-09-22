@@ -1,17 +1,11 @@
 @use "global" as *;
 
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    @include mq(md) {
-        justify-content: flex-start;
-    }
-}
-
 .footer-nav__contents {
     display: flex;
     gap: rem(15);
+    justify-content: center;
     @include mq(md) {
+        justify-content: flex-start;
         flex-direction: initial;
         gap: rem(121);
     }
