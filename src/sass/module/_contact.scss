@@ -25,7 +25,7 @@
 .contact__contents {
     @include mq(md){
         display: flex;
-        padding: rem(80) rem(30) rem(78) rem(36);
+        padding: rem(80) rem(30) rem(78) rem(51);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     }
 }
@@ -34,15 +34,13 @@
     text-align: center;
     @include mq(md){
         width: 53%;
-        padding-right: rem(70);
+        padding-right: rem(85);
         border-right: rem(1) solid $green-accent;
     }
 }
 
 .contact__info-inner {
     max-width: rem(600);
-    padding-left: rem(15);
-    padding-right: rem(15);
     margin-inline: auto;
 }
 
@@ -115,7 +113,8 @@
 }
 
 .contact__info-map {
-    aspect-ratio: 295 / 160;
+    max-width: 87%;
+    margin-inline: auto;
     margin-top: rem(16);
     transition: all 0.3s ease 0s;
     @include mq(md){
@@ -142,7 +141,7 @@
         padding-left: 0;
         margin-top: rem(20);
         flex-grow: 1;
-        width: 30%;
+        width: 49%;
         text-align: left;
     }
 }
