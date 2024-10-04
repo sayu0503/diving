@@ -60,10 +60,10 @@ $(".js-hamburger").click(function () {
 
    //Campaignスライド
     var swiper = new Swiper(".js-campaign-swiper", {
-     slidesPerView: 1.01,
+     slidesPerView: 1,
      spaceBetween: 24,
      loop:true,
-     width: 280,
+     width: 284,
      speed: 1500,
       autoplay: {
         delay: 1000,

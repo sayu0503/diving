@@ -37,13 +37,18 @@
 
  .blog__contents {
      margin-top: rem(27);
-     display: grid;
+     @include mq(md){
+         margin-top: rem(82);
+     }
+ }
+
+ .blog-cards {
+    display: grid;
      gap: rem(40);
      grid-template-columns: repeat(1,1fr);
      place-items: center;
      @include mq(md){
-         grid-template-columns: repeat(3,1fr);
-         margin-top: rem(82);
+        grid-template-columns: repeat(3,1fr);
      }
  }
 

@@ -38,15 +38,21 @@
 }
 
 .voice__contents {
+    margin-top: rem(44);
+    @include mq(md){
+        margin-top: rem(35);
+    }
+}
+
+.voice-cards {
     display: grid;
     gap: rem(38);
-    margin-top: rem(44);
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     @include mq(md){
-        margin-top: rem(35);
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 .voice__btn {
