@@ -67,14 +67,14 @@ $(".js-hamburger").click(function () {
      speed: 1500,
       autoplay: {
         delay: 1000,
-        disableOnInteraction: false,
+        disableOnInteraction: false,//ユーザーがスライドを操作しても、自動再生が止まらない
       },
       breakpoints: {
        // 768px以上の場合
        768: {
         slidesPerView: 3.5,
         spaceBetween: 40,
-        width: 1265,
+        width: 1265.5,
        }
      },
      pagination: {
