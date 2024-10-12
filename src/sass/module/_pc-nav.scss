@@ -29,8 +29,13 @@
     justify-content: center;
 }
 
+@media (any-hover: hover) {
 .pc-nav__link:hover {
     color: $white;
+}
+.pc-nav__link:hover::after{
+    transform: scale(1, 1);
+}
 }
 
 .pc-nav__link::after {
@@ -45,9 +50,7 @@
     transform-origin: center top;
 }
 
-.pc-nav__link:hover::after{
-    transform: scale(1, 1);
-}
+
 
  .pc-nav__subtitle {
        font-family: $base-font-family;

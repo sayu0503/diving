@@ -51,10 +51,11 @@
     transition: .2s;
     box-sizing: border-box;
   }
-
+  @media (any-hover: hover) {
   .button:hover span::after {
     border-color: $green-accent;
   }
+}
 
 //スライド
  .button.slide {
@@ -79,10 +80,12 @@
      z-index: -1;
  }
 
+ @media (any-hover: hover) {
  .button.slide:hover {
      color: $green-accent;
  }
 
  .button.slide:hover::after {
      transform: scale(1,1);
+ }
  }

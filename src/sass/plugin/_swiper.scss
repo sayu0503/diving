@@ -34,9 +34,11 @@
     }
 }
 
+@media (any-hover: hover) {
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
   opacity: 0.5;
+}
 }
 
 .js-campaign-swiper {
