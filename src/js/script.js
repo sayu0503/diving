@@ -114,10 +114,6 @@ $(function() {
           });
       }
   });
-   // ページトップに戻る処理を追加
-   $(".js-page-top").on("click", function() {
-    $("html, body").animate({ scrollTop: 0 }, 300);
-});
 });
 
   //背景色の後に画像やテキストが表示されるエフェクト

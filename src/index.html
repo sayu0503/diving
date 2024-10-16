@@ -35,15 +35,15 @@
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
-<body>
+<body id="top">
   <header class="top-header header" id="js-header">
     <div class="header__inner">
       <h1 class="header__title">
         <a href="#" class="header__logo-link">
-          <img src="./assets/images/common/logo.png" decoding="async" alt="CodeUpsのロゴ">
+          <img src="./assets/images/common/logo.png" decoding="async" alt="CodeUpsのロゴ" width="133" height="50">
         </a>
       </h1>
-        <button class="header__drawer hamburger js-hamburger">
+        <button type="button" class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -224,26 +224,26 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/mv_img_1.jpg" media="(min-width: 768px)">
-                <img src="./assets/images/common/mv_img_1-sp.jpg" alt="ウミガメが泳いでいる様子">
+                <source srcset="./assets/images/common/mv_img_1.jpg" media="(min-width: 768px)" width="750" height="1334">
+                <img src="./assets/images/common/mv_img_1-sp.jpg" alt="ウミガメが泳いでいる様子" decoding="async" width="2880" height="1536">
              </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/mv_img_2.jpg" media="(min-width: 768px)">
-                <img src="./assets/images/common/mv_img_2-sp.jpg" alt="ウミガメの近くを泳ぐ２人のダイバー">
+                <source srcset="./assets/images/common/mv_img_2.jpg" media="(min-width: 768px)" width="750" height="1334">
+                <img src="./assets/images/common/mv_img_2-sp.jpg" alt="ウミガメの近くを泳ぐ２人のダイバー" decoding="async" width="2880" height="1536">
              </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/mv_img_3.jpg" media="(min-width: 768px)">
-                <img src="./assets/images/common/mv_img_3-sp.jpg" alt="太陽が照り付ける海と船">
+                <source srcset="./assets/images/common/mv_img_3.jpg" media="(min-width: 768px)" width="750" height="1334">
+                <img src="./assets/images/common/mv_img_3-sp.jpg" alt="太陽が照り付ける海と船" decoding="async" width="2880" height="1536">
              </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/mv_img_4.jpg" media="(min-width: 768px)">
-                <img src="./assets/images/common/mv_img_4-sp.jpg" alt="綺麗な海と浜辺">
+                <source srcset="./assets/images/common/mv_img_4.jpg" media="(min-width: 768px)" width="750" height="1334">
+                <img src="./assets/images/common/mv_img_4-sp.jpg" alt="綺麗な海と浜辺" decoding="async" width="2880" height="1536">
              </picture>
             </div>
           </div>
@@ -270,7 +270,7 @@
             <div class="swiper-slide campaign__slide">
               <div class="campaign-card">
                 <figure class="campaign-card__img">
-                  <img src="./assets/images/common/campaign_img_1.jpg" alt="色鮮やかな魚の群れ">
+                  <img src="./assets/images/common/campaign_img_1.jpg" alt="色鮮やかな魚の群れ" decoding="async" loading="lazy" width="666" height="446">
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">
@@ -290,7 +290,7 @@
             <div class="swiper-slide campaign__slide">
               <div class="campaign-card">
                 <figure class="campaign-card__img">
-                  <img src="./assets/images/common/campaign_img_2.jpg" alt="エメラルドグリーンの海と船">
+                  <img src="./assets/images/common/campaign_img_2.jpg" alt="エメラルドグリーンの海と船" decoding="async" loading="lazy" width="666" height="446">
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">
@@ -310,7 +310,7 @@
             <div class="swiper-slide campaign__slide">
               <div class="campaign-card">
                 <figure class="campaign-card__img">
-                  <img src="./assets/images/common/campaign_img_3.jpg" alt="クラゲの群れ">
+                  <img src="./assets/images/common/campaign_img_3.jpg" alt="クラゲの群れ" decoding="async" loading="lazy" width="666" height="446">
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">
@@ -330,7 +330,7 @@
             <div class="swiper-slide campaign__slide">
               <div class="campaign-card">
                 <figure class="campaign-card__img">
-                  <img src="./assets/images/common/campaign_img_4.jpg" alt="ダイビング">
+                  <img src="./assets/images/common/campaign_img_4.jpg" alt="ダイビング" decoding="async" loading="lazy" width="666" height="446">
                 </figure>
                 <div class="campaign-card__body">
                   <div class="campaign-card__category">
@@ -373,13 +373,13 @@
               <div class="about__image-container">
                 <picture>
                   <source srcset="./assets/images/common/about_img_2.jpg" media="(min-width: 768px)">
-                  <img src="./assets/images/common/about_img_2-sp.jpg" alt="黄色い二匹の魚が泳いでいる様子">
+                  <img src="./assets/images/common/about_img_2-sp.jpg" alt="黄色い二匹の魚が泳いでいる様子" decoding="async" loading="lazy" width="1760" height="1162">
                  </picture>
               </div>
               <div class="about__image-container-sub">
                <picture>
                  <source srcset="./assets/images/common/about_img_1-sp.jpg" media="(min-width: 768px)">
-                 <img src="./assets/images/common/about_img_1.jpg" alt="瓦屋根の上のシーサー">
+                 <img src="./assets/images/common/about_img_1.jpg" alt="瓦屋根の上のシーサー" decoding="async" loading="lazy" width="1212" height="800">
                </picture>
               </div>
               <div class="about__text-group">
@@ -407,7 +407,7 @@
       </div>
         <div class="information__contents">
           <div class="information__image colorbox">
-            <img src="./assets/images/common/information_img_1.jpg" alt="黄色い熱帯魚が泳いでいる様子">
+            <img src="./assets/images/common/information_img_1.jpg" alt="黄色い熱帯魚が泳いでいる様子" decoding="async" loading="lazy" width="1080" height="712">
           </div>
           <div class="information__body">
             <div class="information__title">ライセンス講習</div>
@@ -434,33 +434,33 @@
           <div class="blog-cards">
             <a href="#" class="blog-cards__item blog-card">
               <figure class="blog-card__img">
-                <img src="./assets/images/common/blog_img_1.jpg" alt="ピンク色のサンゴ礁">
+                <img src="./assets/images/common/blog_img_1.jpg" alt="ピンク色のサンゴ礁" decoding="async" loading="lazy" width="602" height="402">
               </figure>
               <div class="blog-card__body">
                 <time datetime="2023-11-17" class="blog-card__date">2023.11/17</time>
-                <div class="blog-card__title">ライセンス取得</div>
+                <h3 class="blog-card__title">ライセンス取得</h3>
                 <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </a>
             <a href="#" class="blog-cards__item blog-card">
               <figure class="blog-card__img">
-                <img src="./assets/images/common/blog_img_2.jpg" alt="ウミガメが泳いでいる様子">
+                <img src="./assets/images/common/blog_img_2.jpg" alt="ウミガメが泳いでいる様子" decoding="async" loading="lazy" width="602" height="402">
               </figure>
               <div class="blog-card__body">
                 <time datetime="2023-11-17" class="blog-card__date">2023.11/17</time>
-                <div class="blog-card__title">ウミガメと泳ぐ</div>
+                <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
                 <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </a>
             <a href="#" class="blog-cards__item blog-card">
               <figure class="blog-card__img">
-                <img src="./assets/images/common/blog_img_3.jpg" alt="カクレクマノミがイソギンチャクに隠れている様子">
+                <img src="./assets/images/common/blog_img_3.jpg" alt="カクレクマノミがイソギンチャクに隠れている様子" decoding="async" loading="lazy" width="602" height="402">
               </figure>
               <div class="blog-card__body">
                 <time datetime="2023-11-17" class="blog-card__date">2023.11/17</time>
-                <div class="blog-card__title">カクレクマノミ</div>
+                <h3 class="blog-card__title">カクレクマノミ</h3>
                 <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
@@ -494,11 +494,11 @@
                     <div class="voice-card__label">ライセンス講習</div>
                   </div>
                 </div>
-                  <div class="voice-card__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
                 <div class="voice-card__image">
                   <div class="voice-card__img colorbox">
-                    <img src="./assets/images/common/voice_img_1.jpg" alt="麦わら帽子を被った笑顔の女性">
+                    <img src="./assets/images/common/voice_img_1.jpg" alt="麦わら帽子を被った笑顔の女性" decoding="async" loading="lazy" width="360" height="280">
                   </div>
                 </div>
               </div>
@@ -517,11 +517,11 @@
                     <div class="voice-card__label">ファンダイビング</div>
                   </div>
                 </div>
-                  <div class="voice-card__title">ここにタイトルが入ります。ここにタイトル</div>
+                  <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
                 </div>
                 <div class="voice-card__image">
                   <div class="voice-card__img colorbox">
-                    <img src="./assets/images/common/voice_img_2.jpg" alt="親指を立てた男性">
+                    <img src="./assets/images/common/voice_img_2.jpg" alt="親指を立てた男性" decoding="async" loading="lazy" width="360" height="280">
                   </div>
                 </div>
               </div>
@@ -617,7 +617,7 @@
         <div class="price__image colorbox">
           <picture>
             <source srcset="./assets/images/common/price_img_1.jpg" media="(min-width: 768px)">
-            <img src="./assets/images/common/price_img_2.jpg" alt="ウミガメが泳いでいる様子">
+            <img src="./assets/images/common/price_img_2.jpg" alt="ウミガメが泳いでいる様子" decoding="async" loading="lazy" width="1492" height="984">
           </picture>
         </div>
       </div>
@@ -634,7 +634,7 @@
           <div class="contact__info">
             <div class="contact__info-inner">
             <div class="contact__info-title">
-              <img src="./assets/images/common/logo-green.svg" alt="CodeUps">
+              <img src="./assets/images/common/logo-green.svg" alt="CodeUps" decoding="async" loading="lazy" width="400" height="150">
             </div>
             <div class="contact__info-container">
               <div class="contact__info-text-group">
@@ -669,14 +669,14 @@
     <div class="footer__wrapper">
       <div class="footer__container">
         <a href="#" class="footer__logo-link">
-          <img src="./assets/images/common/footer-logo.svg" alt="CodeUps">
+          <img src="./assets/images/common/footer-logo.svg" alt="CodeUps" decoding="async" loading="lazy">
         </a>
         <div class="footer__icon-list">
           <a href="#" class="footer__icon-item">
-            <img src="./assets/images/common/FacebookLogo.svg" alt="facebookのロゴ">
+            <img src="./assets/images/common/FacebookLogo.svg" alt="facebookのロゴ" decoding="async" loading="lazy">
           </a>
           <a href="#" class="footer__icon-item">
-            <img src="./assets/images/common/InstagramLogo.svg" alt="instagramのロゴ">
+            <img src="./assets/images/common/InstagramLogo.svg" alt="instagramのロゴ" decoding="async" loading="lazy">
           </a>
         </div>
       </div>
@@ -797,6 +797,6 @@
       <small>Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
     </div>
   </footer>
-  <a class="page-top-button js-page-top"></a>
+  <a href="#top" class="page-top-button js-page-top" aria-label="ページトップに移動する"></a>
 </body>
 </html>
