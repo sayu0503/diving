@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.sub-mv {
+    height: rem(468);
+    background-image: url(../images/common/campaign_mv_sp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+    @include mq(md){
+       background-image: url(../images/common/campaign_mv.jpg);
+       height: rem(543);
+    }
+
+}
+.sub-mv__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.sub-mv__section-header {
+    font-weight: $normal;
+    font-family:$fourth-font-family;
+    color: $white;
+    letter-spacing: 0;
+    font-size: rem(40);
+    line-height: calc(48 / 40);
+    @include mq(md){
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+    }
+}
+

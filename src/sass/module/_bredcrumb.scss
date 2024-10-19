@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.bredcrumb__text {
+    font-size:rem(14);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(20 / 14);
+    letter-spacing: 0;
+    
+
+}
+

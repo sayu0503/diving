@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.category {
+    
+}
+.category__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(16) rem(21);
+    @include mq(md){
+        display: flex;
+        grid-template-columns: none;
+        gap: rem(32);
+        flex-wrap: wrap;
+    }
+}
+.category__item {
+    text-align: center;
+    display: inline-block;
+    @include mq(md){
+        width: min(rem(162), 100%);
+    }
+}
+.category__item-text {
+    border: 1px solid $green-accent;
+    padding-block: rem(6);
+    padding-inline: rem(5);
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green-accent;
+    line-height: calc(22 / 14);
+    letter-spacing: 0;
+    background-color: $white;
+    transition: color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 最初の要素を常にホバー状態にする */
+.category__item:first-child .category__item-text {
+    background-color: $green-accent;
+    color: $white;
+}
+
+@media (any-hover: hover) {
+    .category__item-text:hover {
+        cursor: pointer;
+        background-color: $green-accent;
+        color: $white;
+    }
+}
+

@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.wp-pagenavi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(12);
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(38);
+    height: rem(38);
+    font-weight: $bold;
+    font-size: rem(16);
+    color: $green-accent;
+    background-color: $white;
+    transition: 0.3s ease;
+    border: 1px solid $green-accent;
+}
+
+@media (any-hover: hover) {
+    .wp-pagenavi a:hover {
+        color: #FFF;
+        background-color: $green-accent;
+        opacity: 1;
+    }
+}
+
+.wp-pagenavi span.current {
+    color: #FFF;
+    background-color: $green-accent;
+    border-color: $green-accent;
+    font-weight: bold;
+}
+
+.previouspostslink {
+    margin-right: rem(40);
+    position: relative;
+    display: inline-block;
+}
+
+.nextpostslink {
+    margin-left: rem(40);
+    position: relative;
+    display: inline-block;
+}
+
+.previouspostslink::before,
+.nextpostslink::before{
+    content: '';
+    width: rem(10);
+    height: rem(10);
+    border-top: solid 2px $green-accent;
+    border-right: solid 2px $green-accent;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.previouspostslink::before{
+    top: rem(13);
+    right: rem(10);
+    transform: rotate(-135deg);
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+.nextpostslink::before {
+    left: rem(10);
+    top: rem(13);
+    transform: rotate(45deg);
+    transition: .2s;
+    box-sizing: border-box;
+}
+
+@media (any-hover: hover) {
+    .previouspostslink:hover::before,
+    .nextpostslink:hover::before {
+        border-top-color: $white; /* ボーダーの色を変える */
+        border-right-color: $white;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* SP表示時に数字の「5」と「6」を非表示にする */
+    .wp-pagenavi .page:nth-of-type(5),
+    .wp-pagenavi .page:nth-of-type(6) {
+        display: none;
+    }
+}
