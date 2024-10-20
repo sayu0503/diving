@@ -42,7 +42,7 @@
   <header class="top-header header" id="js-header">
     <div class="header__inner">
       <h1 class="header__title">
-        <a href="#" class="header__logo-link">
+        <a href="index.html" class="header__logo-link">
           <img src="./assets/images/common/logo.png" decoding="async" alt="CodeUpsのロゴ" width="133" height="50">
         </a>
       </h1>
@@ -196,7 +196,7 @@
                     </ul>
                     <ul class="sp-nav__wrapper">
                       <li class="sp-nav__title">
-                        <a href="#">プライバシー<br class="u-desktop">ポリシー</a>
+                        <a href="#">プライバシー<br class="u-mobile">ポリシー</a>
                       </li>
                     </ul>
                     <ul class="sp-nav__wrapper">
@@ -220,7 +220,7 @@
   </header>
   <main>
     <!-- 下層メインビュー -->
-  <div class="sub-mv">
+  <div class="sub-mv" id="js-mv">
     <div class="sub-mv__title">
       <h1 class="sub-mv__section-header">Campaign</h1>
     </div>
@@ -231,8 +231,193 @@
       <div class="bredcrumb__text">パンくずリスト</div>
     </div>
   </div>
+  <!-- 下層キャンペーン -->
+  <div class="layout-campaign page-campaign fish">
+    <div class="page-campaign__inner inner">
+      <div class="page-campaign__category category">
+          <div class="category__items">
+            <a href="#" class="category__item">
+              <p class="category__item-text">ALL</p>
+            </a>
+            <a href="#" class="category__item">
+              <p class="category__item-text">ライセンス講習</p>
+            </a>
+            <a href="#" class="category__item">
+              <p class="category__item-text">ファンダイビング</p>
+            </a>
+            <a href="#" class="category__item">
+              <p class="category__item-text">体験ダイビング</p>
+            </a>
+          </div>
+       </div>
+       <div class="page-campaign__items">
+        <div class="page-campaign__item">
+          <div class="campaign-card">
+            <figure class="campaign-card__img">
+              <img src="./assets/images/common/campaign_img_1.jpg" alt="色鮮やかな魚の群れ" decoding="async" loading="lazy"
+                width="666" height="446">
+            </figure>
+            <div class="campaign-card__body">
+              <div class="campaign-card__category">
+                <div class="campaign-card__label">ライセンス講習</div>
+              </div>
+              <div class="campaign-card__title">ライセンス取得</div>
+              <div class="campaign-card__wrap">
+                <div class="campaign-card__text">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price">
+                  <p class="campaign-card__first-price">¥56,000</p>
+                  <p class="campaign-card__second-price">¥46,000</p>
+                </div>
+                <div class="campaign-card__content u-desktop">
+                  <p class="campaign-card__text-item">
+                    ここにテキストが入ります。ここにテキストが入ります。ここ
+                    にテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここに
+                    テキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキス
+                    トが入ります。ここにテキストが入ります。ここにテキスト</p>
+                    <div class="campaign-card__meta">
+                      <time class="campaign-card__date" datetime="2023-6-1/2023-9-30">2023/6/1-9/30</time>
+                    <p class="campaign-card__comment">ご予約・お問い合わせはコチラ</p>
+                    </div>
+                    <div class="campaign-card__apply">
+                      <a href="#" class="button slide"><span>Contact&nbsp;us</span></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-campaign__item">
+          <div class="campaign-card">
+            <figure class="campaign-card__img">
+              <img src="./assets/images/common/campaign_img_2.jpg" alt="エメラルドグリーンの海と船" decoding="async" loading="lazy"
+                width="666" height="446">
+            </figure>
+            <div class="campaign-card__body">
+              <div class="campaign-card__category">
+                <div class="campaign-card__label">体験ダイビング</div>
+              </div>
+              <div class="campaign-card__title">貸切体験ダイビング</div>
+              <div class="campaign-card__wrap">
+                <div class="campaign-card__text">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price">
+                  <p class="campaign-card__first-price">¥24,000</p>
+                  <p class="campaign-card__second-price">¥18,000</p>
+                </div>
+                <div class="campaign-card__content u-desktop">
+                  <p class="campaign-card__text-item">
+                    ここにテキストが入ります。ここにテキストが入ります。ここ
+                    にテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここに
+                    テキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキス
+                    トが入ります。ここにテキストが入ります。ここにテキスト</p>
+                    <div class="campaign-card__meta">
+                      <time class="campaign-card__date" datetime="2023-6-1/2023-9-30">2023/6/1-9/30</time>
+                    <p class="campaign-card__comment">ご予約・お問い合わせはコチラ</p>
+                    </div>
+                    <div class="campaign-card__apply">
+                      <a href="#" class="button slide"><span>Contact&nbsp;us</span></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-campaign__item">
+          <div class="campaign-card">
+            <figure class="campaign-card__img">
+              <img src="./assets/images/common/campaign_img_3.jpg" alt="クラゲの群れ" decoding="async" loading="lazy"
+                width="666" height="446">
+            </figure>
+            <div class="campaign-card__body">
+              <div class="campaign-card__category">
+                <div class="campaign-card__label">体験ダイビング</div>
+              </div>
+              <div class="campaign-card__title">ナイトダイビング</div>
+              <div class="campaign-card__wrap">
+                <div class="campaign-card__text">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price">
+                  <p class="campaign-card__first-price">¥10,000</p>
+                  <p class="campaign-card__second-price">¥8,000</p>
+                </div>
+                <div class="campaign-card__content u-desktop">
+                  <p class="campaign-card__text-item">
+                    ここにテキストが入ります。ここにテキストが入ります。ここ
+                    にテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここに
+                    テキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキス
+                    トが入ります。ここにテキストが入ります。ここにテキスト</p>
+                    <div class="campaign-card__meta">
+                      <time class="campaign-card__date" datetime="2023-6-1/2023-9-30">2023/6/1-9/30</time>
+                    <p class="campaign-card__comment">ご予約・お問い合わせはコチラ</p>
+                    </div>
+                    <div class="campaign-card__apply">
+                      <a href="#" class="button slide"><span>Contact&nbsp;us</span></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-campaign__item">
+          <div class="campaign-card">
+            <figure class="campaign-card__img">
+              <img src="./assets/images/common/campaign_img_4.jpg" alt="ダイビング" decoding="async" loading="lazy"
+                width="666" height="446">
+            </figure>
+            <div class="campaign-card__body">
+              <div class="campaign-card__category">
+                <div class="campaign-card__label">ファンダイビング</div>
+              </div>
+              <div class="campaign-card__title">貸切ファンダイビング</div>
+              <div class="campaign-card__wrap">
+                <div class="campaign-card__text">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price">
+                  <p class="campaign-card__first-price">¥20,000</p>
+                  <p class="campaign-card__second-price">¥16,000</p>
+                </div>
+                <div class="campaign-card__content u-desktop">
+                  <p class="campaign-card__text-item">
+                    ここにテキストが入ります。ここにテキストが入ります。ここ
+                    にテキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここに
+                    テキストが入ります。ここにテキストが入ります。
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキス
+                    トが入ります。ここにテキストが入ります。ここにテキスト</p>
+                    <div class="campaign-card__meta">
+                      <time class="campaign-card__date" datetime="2023-6-1/2023-9-30">2023/6/1-9/30</time>
+                    <p class="campaign-card__comment">ご予約・お問い合わせはコチラ</p>
+                    </div>
+                    <div class="campaign-card__apply">
+                      <a href="#" class="button slide"><span>Contact&nbsp;us</span></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <!-- ページナビ -->
+       <div class="page-campaign__pagenavi pagenavi">
+        <div class="wp-pagenavi">
+        <a class="previouspostslink" rel="prev" href="#"></a>
+        <span class="current">1</span>
+        <a class="page smaller" href="#">2</a>
+        <a class="page smaller" href="#">3</a>
+        <a class="page larger" href="#">4</a>
+        <a class="page larger" href="#">5</a>
+        <a class="page larger" href="#">6</a>
+        <a class="nextpostslink" rel="next" href="#"></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
   <!-- カテゴリー -->
-   <div class="page-category category">
+   <!-- <div class="category">
     <div class="category__inner inner">
       <div class="category__items">
         <a class="category__item">
@@ -249,9 +434,9 @@
         </a>
       </div>
     </div>
-   </div>
+   </div> -->
   <!-- ページナビ -->
-  <div class="pagenavi">
+  <!-- <div class="pagenavi">
     <div class="wp-pagenavi">
     <a class="previouspostslink" rel="prev" href="#"></a>
     <span class="current">1</span>
@@ -262,9 +447,9 @@
     <a class="page larger" href="#">6</a>
     <a class="nextpostslink" rel="next" href="#"></a>
     </div>
-  </div>
+  </div> -->
     <!-- Contact -->
-    <section class="top-contact contact">
+    <section class="campaign-contact contact">
       <div class="contact__inner inner">
         <div class="contact__contents">
           <div class="contact__info">
@@ -412,7 +597,7 @@
                     </ul>
                     <ul class="footer-nav__wrapper">
                       <li class="footer-nav__title">
-                        <a href="#">プライバシー<br class="u-desktop">ポリシー</a>
+                        <a href="#">プライバシー<br class="u-mobile">ポリシー</a>
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">

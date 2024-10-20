@@ -38,13 +38,13 @@
 }
 
 .previouspostslink {
-    margin-right: rem(40);
+    margin-right: rem(30);
     position: relative;
     display: inline-block;
 }
 
 .nextpostslink {
-    margin-left: rem(40);
+    margin-left: rem(30);
     position: relative;
     display: inline-block;
 }
@@ -54,8 +54,8 @@
     content: '';
     width: rem(10);
     height: rem(10);
-    border-top: solid 2px $green-accent;
-    border-right: solid 2px $green-accent;
+    border-top: solid 1px $green-accent;
+    border-right: solid 1px $green-accent;
     position: absolute;
     transition: all 0.3s ease;
 }

@@ -1,0 +1,22 @@
+@use "global" as *;
+
+
+.page-campaign__items {
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns: 100%;
+    gap: rem(40);
+    padding-inline: rem(33);
+    @include mq(md){
+       grid-template-columns: repeat(2, 1fr);
+       gap: rem(80) rem(40);
+    }
+}
+
+.page-campaign__pagenavi {
+    margin-top: rem(77);
+    @include mq(md){
+       margin-top: rem(89);
+    }
+}
+

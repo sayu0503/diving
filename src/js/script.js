@@ -45,7 +45,7 @@ $(".js-hamburger").click(function () {
     });
 
   //ヘッダーの背景色変更
-  const header = $("#js-header");
+    const header = $("#js-header");
     const hero = $("#js-mv");
     $(window).on("scroll", function () {
         console.log($(this).scrollTop());

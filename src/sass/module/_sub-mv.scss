@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .sub-mv {
-    height: rem(468);
+    height: rem(460);
     background-image: url(../images/common/campaign_mv_sp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@
     background-position: center center;
     @include mq(md){
        background-image: url(../images/common/campaign_mv.jpg);
-       height: rem(543);
+       height: rem(548);
     }
 
 }

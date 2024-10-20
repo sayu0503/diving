@@ -1,12 +1,9 @@
 @use "global" as *;
 
-.category {
-    
-}
 .category__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: rem(16) rem(21);
+    gap: rem(18) rem(21);
     @include mq(md){
         display: flex;
         grid-template-columns: none;
@@ -23,7 +20,7 @@
 }
 .category__item-text {
     border: 1px solid $green-accent;
-    padding-block: rem(6);
+    padding-block: rem(4.5);
     padding-inline: rem(5);
     font-size: rem(14);
     font-weight: $regular;
