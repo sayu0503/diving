@@ -1,15 +1,14 @@
 @use "global" as *;
 
 .sub-mv {
-    height: rem(460);
-    background-image: url(../images/common/campaign_mv_sp.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    background-position: center center;
+}
+
+.sub-mv__image {
+    z-index: 1;
+    aspect-ratio: 375/460;
     @include mq(md){
-       background-image: url(../images/common/campaign_mv.jpg);
-       height: rem(548);
+       aspect-ratio: 1440/548;
     }
 
 }
@@ -20,6 +19,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    z-index: 2;
 }
 .sub-mv__section-header {
     font-weight: $normal;

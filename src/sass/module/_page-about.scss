@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.fish {
+.page-about {
     position: relative;
+    z-index: 1;
 }
-
-.fish::before {
+.page-about::before{
     content: "";
     background-image: url(../images/common/fish_2.png);
     background-repeat: no-repeat;
@@ -14,11 +14,15 @@
     height: rem(55);
     top: rem(-23);
     left: calc(50% - min(48vw,rem(173)));
-    z-index: -1;
+    z-index: 2;
     @include mq(md){
         width: rem(301);
         height: rem(138);
-        top: rem(-75);
+        top: rem(-70);
         left: calc(50% - min(48vw,rem(621)));
     }
+}
+
+.page-about__section-header {
+    margin-top: rem(40);
 }

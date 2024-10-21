@@ -19,3 +19,15 @@
         margin-top: rem(72);
     }
 }
+.campaign__title--size {
+    @include mq(md){
+       font-size: rem(24);
+    }
+}
+
+.campaign-card__body--layout {
+    @include mq(md){
+       padding-block: rem(23) rem(40);
+       padding-inline: rem(24);
+    }
+}

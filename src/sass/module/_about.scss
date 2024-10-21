@@ -105,3 +105,20 @@
         visibility: visible;
     }
 }
+
+.about__image-container--layout {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    @include mq(md){
+       width: 82%;
+       margin-left: auto;
+    }
+}
+
+.about__title--absolute {
+    position: absolute;
+    top: rem(47);
+    left: rem(24);
+    color: $white;
+}

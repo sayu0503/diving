@@ -1,5 +1,27 @@
 @use "global" as *;
 
+.page-campaign {
+    position: relative;
+}
+
+.page-campaign::before{
+    content: "";
+    background-image: url(../images/common/fish_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    top: rem(-23);
+    left: calc(50% - min(48vw,rem(173)));
+    z-index: -1;
+    @include mq(md){
+        width: rem(301);
+        height: rem(138);
+        top: rem(-70);
+        left: calc(50% - min(48vw,rem(621)));
+    }
+}
 
 .page-campaign__items {
     margin-top: rem(40);
@@ -10,6 +32,7 @@
     @include mq(md){
        grid-template-columns: repeat(2, 1fr);
        gap: rem(80) rem(40);
+       padding-inline: 0;
     }
 }
 
