@@ -28,6 +28,7 @@
     letter-spacing: 0;
     font-size: rem(40);
     line-height: calc(48 / 40);
+    z-index: 20;
     @include mq(md){
         font-size: rem(80);
         line-height: calc(100 / 80);
