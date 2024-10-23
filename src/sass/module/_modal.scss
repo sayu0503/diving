@@ -8,6 +8,7 @@
     width: 100%;
     z-index: 2000;
     background: rgba($gray2, 80%);
+    transition: opacity 0.3s, visibility 0.3s;
   }
 
 
@@ -18,21 +19,23 @@
 
   .modal__content {
     left: 50%;
-    padding: 10px;
     position: absolute;
     text-align: right;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: rem(345);
+    @include mq(md){
+        width: rem(920);
+    }
   }
-  .modal__content.modal__img1 {
-    aspect-ratio: 350 / 233;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .modal__content--width {
+    @include mq(md){
+        width: rem(550);
+    }
   }
 
   .fixed {
-    height: 100%;
     position: fixed;
     width: 100%;
+    overflow: hidden;
   }

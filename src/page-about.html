@@ -258,54 +258,54 @@
         <div class="about__text-group about__text-group">
           <p class="about__title about__title--absolute">Dive into<br>the Ocean</p>
           <div class="about__group">
-            <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span></p>
+            <p class="about__text about__text--layout">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
         </div>
       </div>
+    </div>
+   </div>
    <!-- Gallery -->
       <section class="layout-gallery gallery">
+        <div class="gallery__inner inner">
         <div class="section-header">
           <p class="section-header__title"> Gallery</p>
           <h2 class="section-header__subtitle">フォト</h2>
         </div>
-        <div class="gallery__contents">
-            <div class="gallery__image-1 js-modal-open">
-               <img src="./assets/images/common/gallery1.jpg" alt="赤い小さな魚の群れが岩場を泳いでいる様子" decoding="async" loading="lazy"
-              width="1492" height="984">
-            </div>
-            <div class="modal js-modal js-modal-close">
-              <div class="modal__body">
-                <div class="modal__content js-modal__content">
-                  <img src="./assets/images/common/gallery1.jpg" alt="赤い小さな魚の群れが岩場を泳いでいる様子" decoding="async" loading="lazy"
-                  width="1492" height="984">
-                </div>
-              </div>
-            </div>
-            <div class="gallery__image-2 js-modal-open">
-               <img src="./assets/images/common/gallery2.jpg" alt="綺麗な海に浮かぶ船" decoding="async" loading="lazy"
-              width="1160" height="738">
-            </div>
-            <div class="gallery__image-3 js-modal-open">
-              <img src="./assets/images/common/gallery3.jpg" alt="縞模様の熱帯魚が２匹泳いでいる" decoding="async" loading="lazy"
-              width="1160" height="738">
-            </div>
-            <div class="gallery__image-4 js-modal-open">
-               <img src="./assets/images/common/gallery4.jpg" alt="黄色い熱帯魚が泳いでいる" decoding="async" loading="lazy"
-              width="1160" height="738">
-            </div>
-
-            <div class="gallery__image-5 js-modal-open">
-               <img src="./assets/images/common/gallery5.jpg" alt="魚の群れがこちらに向かって泳いでいる" decoding="async" loading="lazy"
-              width="1160" height="738">
-            </div>
-            <div class="gallery__image-6 js-modal-open">
-               <img src="./assets/images/common/gallery6.jpg" alt="黄色い熱帯魚が泳いでいる様子" decoding="async" loading="lazy"
-              width="1492" height="984">
-            </div>
-    </div>
-  </せ>
-   </div>
+        <ul class="gallery__contents">
+          <li class="gallery__image-1">
+            <a href="#" class="js-modal-open" data-target="#modal1">
+              <img src="./assets/images/common/gallery1.jpg" alt="赤い小さな魚の群れが岩場を泳いでいる様子" decoding="async" loading="lazy" width="1492" height="984">
+            </a>
+          </li>
+          <li class="gallery__image-2">
+            <a href="#" class="js-modal-open" data-target="#modal2">
+              <img src="./assets/images/common/gallery2.jpg" alt="綺麗な海に浮かぶ船" decoding="async" loading="lazy" width="1160" height="738">
+            </a>
+          </li>
+          <li class="gallery__image-3">
+            <a href="#" class="js-modal-open" data-target="#modal3">
+              <img src="./assets/images/common/gallery3.jpg" alt="縞模様の熱帯魚が２匹泳いでいる" decoding="async" loading="lazy" width="1160" height="738">
+            </a>
+          </li>
+          <li class="gallery__image-4">
+            <a href="#" class="js-modal-open" data-target="#modal4">
+              <img src="./assets/images/common/gallery4.jpg" alt="黄色い熱帯魚が泳いでいる" decoding="async" loading="lazy" width="1160" height="738">
+            </a>
+          </li>
+          <li class="gallery__image-5">
+            <a href="#" class="js-modal-open" data-target="#modal5">
+              <img src="./assets/images/common/gallery5.jpg" alt="魚の群れがこちらに向かって泳いでいる" decoding="async" loading="lazy" width="1160" height="738">
+            </a>
+          </li>
+          <li class="gallery__image-6">
+            <a href="#" class="js-modal-open" data-target="#modal6">
+              <img src="./assets/images/common/gallery6.jpg" alt="黄色い熱帯魚が泳いでいる様子" decoding="async" loading="lazy" width="1492" height="984">
+            </a>
+          </li>
+        </ul>
+      </div>
+      </section>
     <!-- Contact -->
     <section class="campaign-contact contact">
       <div class="contact__inner inner">
@@ -346,6 +346,55 @@
       </div>
     </section>
   </main>
+  <!-- モーダル -->
+   
+  <!-- <div id="modal1" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content modal__content--width js-modal__content">
+        <img src="./assets/images/common/gallery1.jpg" alt="赤い小さな魚の群れが岩場を泳いでいる様子" decoding="async" loading="lazy"
+        width="1492" height="984" class="modal__image1">
+      </div>
+    </div>
+  </div>
+  <div id="modal2" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content js-modal__content">
+        <img src="./assets/images/common/gallery2.jpg" alt="綺麗な海に浮かぶ船" decoding="async" loading="lazy"
+        width="1160" height="738" class="modal__image2">
+      </div>
+    </div>
+  </div>
+  <div id="modal3" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content js-modal__content">
+        <img src="./assets/images/common/gallery3.jpg" alt="縞模様の熱帯魚が２匹泳いでいる" decoding="async" loading="lazy"
+        width="1160" height="738">
+      </div>
+    </div>
+  </div>
+  <div id="modal4" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content js-modal__content">
+        <img src="./assets/images/common/gallery4.jpg" alt="黄色い熱帯魚が泳いでいる" decoding="async" loading="lazy" width="1160" height="738">
+      </div>
+    </div>
+  </div>
+  <div id="modal5" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content js-modal__content">
+        <img src="./assets/images/common/gallery5.jpg" alt="魚の群れがこちらに向かって泳いでいる" decoding="async" loading="lazy"
+        width="1160" height="738">
+      </div>
+    </div>
+  </div>
+  <div id="modal6" class="modal js-modal js-modal-close">
+    <div class="modal__body">
+      <div class="modal__content modal__content--width js-modal__content">
+        <img src="./assets/images/common/gallery6.jpg" alt="黄色い熱帯魚が泳いでいる様子" decoding="async" loading="lazy"
+        width="1492" height="984">
+      </div>
+    </div>
+  </div> -->
   <!--フッター-->
   <footer class="top-footer footer">
     <div class="fooer__inner inner">

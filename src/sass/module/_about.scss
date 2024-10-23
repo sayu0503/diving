@@ -100,7 +100,7 @@
 
 .about__title--absolute {
     position: absolute;
-    top: rem(47);
+    top: rem(24);
     left: rem(24);
     color: $white;
     @include mq(md){
@@ -120,6 +120,12 @@
         color: $white;
         margin-top: rem(-6);
      }
+ }
+
+ .about__text--layout {
+    @include mq(md){
+        margin-top: rem(22);
+    }
  }
 
 .about__btn {

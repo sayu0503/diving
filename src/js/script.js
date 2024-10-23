@@ -143,6 +143,7 @@ $(function() {
    });
   });
 
+  //モーダル
 // モーダルウィンドウ
 $(function () {
   $(".js-modal-open").on("click", function () {
