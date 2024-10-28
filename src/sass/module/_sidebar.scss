@@ -1,0 +1,145 @@
+@use "global" as *;
+
+.sidebar__items {
+    padding-inline: rem(25);
+}
+
+.sidebar__item:not(:first-child) {
+    margin-top: rem(80);
+}
+
+.sidebar__title {
+    font-size: rem(24);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(35 / 24);
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    justify-content: start;
+    width: min(100%, rem(226));
+    border-left: rem(8) solid $green-accent;
+    padding-left: rem(16);
+}
+
+.sidebar__title::before {
+        content: "";
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: rem(50);
+        height: rem(50);
+        background-image: url(../images/common/whale-dot.png);
+}
+
+.sidebar__article {
+    margin-top: rem(24);
+}
+
+.sidebar__article-item {
+    border: 1px solid $gray3;
+    display: grid;
+    grid-template-columns: calc(121 / 294 * 100%) 1fr;
+    gap: rem(16);
+    padding: rem(16);
+    box-shadow: rem(2) rem(2) rem(10) rgba($black, $alpha: 0.25);
+}
+
+.sidebar__article-item:not(:first-child){
+    margin-top: rem(24);
+}
+
+.sidebar__article-image {
+    aspect-ratio: 121 / 90;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar__article-textbox {
+    text-align: justify;
+}
+
+.sidebar__article-data {
+    font-size: rem(12);
+    font-weight: $regular;
+    font-family: $third-font-family;
+    color: $green;
+    line-height: calc(18 / 12);
+}
+.sidebar__article-text {
+    font-size: rem(16);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(23 / 16);
+}
+
+.sidebar__review {
+    margin-top: rem(24);
+}
+
+.sidebar__review-image img{
+    aspect-ratio: 294 / 218;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar__review-textbox {
+    margin-top: rem(16);
+}
+
+.sidebar__review-age {
+    font-size: rem(12);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(12 / 18);
+}
+
+.sidebar__review-text {
+    margin-top: rem(8);
+    font-size: rem(24);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(35 / 24);
+}
+
+.sidebar__btn {
+    margin-top: rem(40);
+}
+
+.sidebar__campaign-contents {
+    margin-top: rem(24);
+}
+
+.sidebar__campaign-cards {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: rem(40);
+
+}
+
+.sidebar__archive {
+    margin-top: rem(24);
+}
+
+.sidebar__archive-group {
+
+}
+
+.sidebar__archive-calendar {
+
+}
+
+.sidebar__archive-months {
+
+}
+
+.sidebar__archive-month {
+
+}
+

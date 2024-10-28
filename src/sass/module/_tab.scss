@@ -9,8 +9,9 @@
     gap: rem(19);
     justify-content: center;
     cursor: pointer;
-    @include mq(md){
-       gap: rem(90);
+
+    @include mq(md) {
+        gap: rem(90);
     }
 }
 
@@ -28,24 +29,25 @@
     transition: color 0.3s;
     transition: background-color 0.3s, color 0.3s;
     white-space: nowrap;
-    @include mq(md){
-       width: 100%;
-       padding-block: rem(13);
-       padding-inline: rem(16);
-       font-size: rem(24);
-       line-height: calc(35 / 24);
-       display: flex;
-       align-items: center;
-       gap: rem(8);
-       justify-content: center;
-       width: min(100%, rem(300));
+
+    @include mq(md) {
+        width: 100%;
+        padding-block: rem(13);
+        padding-inline: rem(16);
+        font-size: rem(24);
+        line-height: calc(35 / 24);
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+        justify-content: center;
+        width: min(100%, rem(300));
     }
 }
 
 .tab__button--whale::before,
 .tab__button--shark::before,
-.tab__button--small-fish::before  {
-    @include mq(md){
+.tab__button--small-fish::before {
+    @include mq(md) {
         content: "";
         display: inline-block;
         background-repeat: no-repeat;
@@ -59,23 +61,26 @@
 .tab__button--whale::before {
     background-image: url(../images/common/whale-green.png);
 }
+
 .tab__button--shark::before {
     background-image: url(../images/common/shark-green.png);
 }
+
 .tab__button--small-fish::before {
     background-image: url(../images/common/small-fish-green.png);
 }
 
 
 .tab__button.is-active {
-        cursor: pointer;
-        background-color: $green-accent;
-        color: $white;
-    }
-    .tab__button--whale.is-active::before,
-    .tab__button--shark.is-active::before,
-    .tab__button--small-fish.is-active::before{
-    @include mq(md){
+    cursor: pointer;
+    background-color: $green-accent;
+    color: $white;
+}
+
+.tab__button--whale.is-active::before,
+.tab__button--shark.is-active::before,
+.tab__button--small-fish.is-active::before {
+    @include mq(md) {
         content: "";
         display: inline-block;
         background-repeat: no-repeat;
@@ -84,23 +89,27 @@
         height: rem(64);
     }
 }
+
 .tab__button--whale.is-active::before {
     background-image: url(../images/common/whale-white.png);
 
 }
-.tab__button--shark.is-active::before{
+
+.tab__button--shark.is-active::before {
     background-image: url(../images/common/shark-white.png);
 
 }
-.tab__button--small-fish.is-active::before{
+
+.tab__button--small-fish.is-active::before {
     background-image: url(../images/common/small-fish-white.png);
 }
 
 
 .tab__contents {
     margin-top: rem(16);
-    @include mq(md){
-       margin-top: rem(24);
+
+    @include mq(md) {
+        margin-top: rem(24);
     }
 }
 
@@ -110,18 +119,19 @@
     padding-inline: rem(24);
     display: none;
 }
+
 .tab__content.is-active {
     display: block;
-    @include mq(md){
-       display: grid;
-       gap: rem(48);
-       grid-template-columns: calc(516 / 1080 * 100%) 1fr;
-       align-items: center;
+
+    @include mq(md) {
+        display: grid;
+        gap: rem(48);
+        grid-template-columns: calc(516 / 1080 * 100%) 1fr;
+        align-items: center;
     }
 }
-.tab__text-block {
-    text-align: justify;
-}
+
+.tab__text-block {}
 
 .tab__title {
     border-bottom: 1px solid $green-accent;
@@ -131,6 +141,8 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(24 / 24);
+
+    @include mq(md) {}
 }
 
 .tab__text {
@@ -140,16 +152,17 @@
     font-family: $base-font-family;
     color: $black;
     line-height: calc(24 / 16);
-    @include mq(md){
-       margin-top: 0;
-       flex: 1;
+
+    @include mq(md) {
+        flex: 1;
     }
 }
 
 .tab__image {
     margin-top: rem(8);
-    @include mq(md){
-       margin-top: 0;
+
+    @include mq(md) {
+        margin-top: 0;
     }
 }
 
