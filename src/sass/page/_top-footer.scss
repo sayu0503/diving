@@ -2,10 +2,7 @@
 
 .top-footer {
     margin-top: rem(108);
-    background-color: $green-accent;
-    padding: rem(47) 0;
     @include mq(md){
         margin-top: rem(160);
-        padding: rem(80) 0;
     }
 }

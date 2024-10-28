@@ -143,27 +143,48 @@ $(function() {
    });
   });
 
-  //モーダル
-// モーダルウィンドウ
-$(function () {
-  $(".js-modal-open").on("click", function () {
-    $(".js-modal").fadeIn();
-    return false;
+//モーダルウィンドウ
+$(document).ready(function() {
+  // 画像がクリックされたときの処理
+  $('.js-modal-open').on('click', function(e) {
+    e.preventDefault(); // リンクのデフォルト動作を無効化
+  
+    const imgSrc = $(this).data('image'); // data-imageの値を取得
+    $('.modal__image').attr('src', imgSrc); // モーダル内の画像にsrcを設定
+    const imgIndex = $(this).data('index'); // data-index属性から画像番号を取得
+
+    $('.js-modal').fadeIn(); // モーダルを表示
+    $('.modal__image').css('opacity', '1'); // 画像の透明度を1に設定
+    // スクロールを無効にするために body にクラスを追加
+    $('body').addClass('no-scroll');
+    // 画像が1枚目または6枚目なら50vwに設定、それ以外は100vw
+    if (imgIndex === 1 || imgIndex === 6) {
+      $('.modal__content').css('width', '50vw');
+    } else {
+      $('.modal__content').css('width', '100vw');
+    }
   });
-  $(".js-modal-close").on("click", function () {
-    $(".js-modal").fadeOut();
-    return false;
   });
-});
-// モーダルウィンドウオープン時の背景固定
-$(function () {
-  let scrollPosition;
-  $(".js-modal-open").on("click", function () {
-    scrollPosition = $(window).scrollTop();
-    $("body").addClass("fixed").css({ top: -scrollPosition });
+
+  // モーダルを閉じるときの処理
+  $('.js-modal-close').on('click', function() {
+    $('.js-modal').fadeOut(function() {
+      $('.modal__image').css('opacity', '0');
+    });
+
+    // スクロールを有効にするためにクラスを削除
+    $('body').removeClass('no-scroll');
   });
-  $(".js-modal-close").on("click", function () {
-    $("body").removeClass("fixed").css({ top: 0 });
-    window.scrollTo(0, scrollPosition);
+
+  //タブ
+  $(function () {
+    const tabButton = $(".js-tab-button"),
+      tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+      let index = tabButton.index(this);
+      tabButton.removeClass("is-active");
+      $(this).addClass("is-active");
+      tabContent.removeClass("is-active");
+      tabContent.eq(index).addClass("is-active");
+    });
   });
-});

@@ -1,7 +1,11 @@
 @use "global" as *;
 
 .footer {
-    position: relative;
+    background-color: $green-accent;
+    padding: rem(47) 0;
+    @include mq(md){
+        padding: rem(80) 0;
+    }
 }
 
 .footer__wrapper {

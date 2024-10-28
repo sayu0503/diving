@@ -1,41 +1,41 @@
 @use "global" as *;
 
   .modal {
-    height: 100vh;
-    left: 0;
+    display: none;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    height: 100vh;
     z-index: 2000;
-    background: rgba($gray2, 80%);
-    transition: opacity 0.3s, visibility 0.3s;
   }
 
+  .modal__overlay {
+    background: rgba($gray2, 80%);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
 
-  .modal.is-open {
-    visibility: visible;
+  }
+  .modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: rem(920);
+    width: 100vw;
+    height: auto;
     opacity: 1;
   }
 
-  .modal__content {
-    left: 50%;
-    position: absolute;
-    text-align: right;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: rem(345);
-    @include mq(md){
-        width: rem(920);
-    }
-  }
-  .modal__content--width {
-    @include mq(md){
-        width: rem(550);
-    }
+  .modal__image {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* 初期状態は透明 */
+    transition: opacity 0.5s ease; /* アニメーションを追加 */
   }
 
-  .fixed {
-    position: fixed;
-    width: 100%;
+  .no-scroll {
     overflow: hidden;
+    height: 100vh; /* ページが縦方向に動かないように固定 */
   }
