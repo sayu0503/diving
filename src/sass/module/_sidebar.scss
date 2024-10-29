@@ -2,6 +2,10 @@
 
 .sidebar__items {
     padding-inline: rem(25);
+
+    @include mq(md) {
+        padding-inline: 0;
+    }
 }
 
 .sidebar__item:not(:first-child) {
@@ -24,13 +28,13 @@
 }
 
 .sidebar__title::before {
-        content: "";
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: rem(50);
-        height: rem(50);
-        background-image: url(../images/common/whale-dot.png);
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(50);
+    height: rem(50);
+    background-image: url(../images/common/whale-dot.png);
 }
 
 .sidebar__article {
@@ -46,15 +50,28 @@
     box-shadow: rem(2) rem(2) rem(10) rgba($black, $alpha: 0.25);
 }
 
-.sidebar__article-item:not(:first-child){
+.sidebar__article-item:not(:first-child) {
     margin-top: rem(24);
 }
 
 .sidebar__article-image {
+    overflow: hidden;
+}
+
+.sidebar__article-image img {
+    display: block;
     aspect-ratio: 121 / 90;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.5s ease 0s;
+}
+
+@media (any-hover: hover) {
+    .sidebar__article-item:hover .sidebar__article-image img {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
 }
 
 .sidebar__article-textbox {
@@ -68,6 +85,7 @@
     color: $green;
     line-height: calc(18 / 12);
 }
+
 .sidebar__article-text {
     font-size: rem(16);
     font-weight: $medium;
@@ -80,7 +98,7 @@
     margin-top: rem(24);
 }
 
-.sidebar__review-image img{
+.sidebar__review-image img {
     aspect-ratio: 294 / 218;
     width: 100%;
     height: 100%;
@@ -127,19 +145,57 @@
     margin-top: rem(24);
 }
 
-.sidebar__archive-group {
+.sidebar__archive-group {}
 
+.sidebar__archive-calendar,
+.sidebar__archive-month {
+    font-size: rem(24);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green-accent;
+    line-height: calc(35 / 24);
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+    justify-content: start;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.sidebar__archive-calendar {
+@media (any-hover: hover) {
+    .sidebar__archive-calendar:hover,
+    .sidebar__archive-month:hover {
+        opacity: 0.6;
+    }
+}
 
+.sidebar__archive-calendar::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-right: rem(12) solid transparent;
+    border-left: rem(12) solid transparent;
+    border-top: rem(21) solid $green-accent;
+    border-bottom: 0;
+}
+
+.sidebar__archive-month::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top: rem(12) solid transparent;
+    border-bottom: rem(12) solid transparent;
+    border-left: rem(21) solid $green-accent;
+    border-right: 0;
 }
 
 .sidebar__archive-months {
+    margin-top: rem(4);
+    margin-left: rem(30);
 
 }
 
-.sidebar__archive-month {
-
-}
-
+.sidebar__archive-month {}

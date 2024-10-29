@@ -24,12 +24,20 @@
 }
 
 .page-blog__contents{
-
+    @include mq(md){
+       display: flex;
+       gap: rem(80);
+       grid-template-columns: repeat(2, 1fr);
+    }
 }
 .page-blog__cards {
     display: grid;
     gap: rem(40);
-
+    @include mq(md){
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(40);
+        row-gap: rem(80);
+    }
 }
 .page-blog-cards__item{
 
@@ -40,4 +48,7 @@
 }
 .page-blog__sidebar {
     margin-top: rem(80);
+    @include mq(md){
+       margin-top: 0;
+    }
 }
