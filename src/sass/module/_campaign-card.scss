@@ -27,6 +27,12 @@
         padding: rem(24) rem(16) rem(40) rem(15);
     }
 }
+.campaign-card__body--layout {
+    @include mq(md){
+       padding-block: rem(23) rem(40);
+       padding-inline: rem(24);
+    }
+}
 
 .campaign-card__label {
     font-family: $base-font-family;
@@ -55,6 +61,10 @@
     @include mq(md){
         margin-top: rem(2);
     }
+}
+.campaign-card__title--center {
+    text-align: center;
+    margin-top: 0;
 }
 
 .campaign-card__text {

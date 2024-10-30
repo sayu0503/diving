@@ -25,18 +25,21 @@
 
 .page-blog__contents{
     @include mq(md){
-       display: flex;
+       display: grid;
        gap: rem(80);
-       grid-template-columns: repeat(2, 1fr);
+       grid-template-columns: 1fr rem(294);
     }
 }
+
 .page-blog__cards {
     display: grid;
     gap: rem(40);
+    margin-inline: rem(6);
     @include mq(md){
         grid-template-columns: 1fr 1fr;
         column-gap: rem(40);
-        row-gap: rem(80);
+        row-gap: rem(85);
+        margin-inline: 0;
     }
 }
 .page-blog-cards__item{
@@ -47,8 +50,9 @@
     margin-top: rem(80);
 }
 .page-blog__sidebar {
-    margin-top: rem(80);
+    margin-top: rem(82);
     @include mq(md){
        margin-top: 0;
+
     }
 }

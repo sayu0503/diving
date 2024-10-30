@@ -25,9 +25,3 @@
     }
 }
 
-.campaign-card__body--layout {
-    @include mq(md){
-       padding-block: rem(23) rem(40);
-       padding-inline: rem(24);
-    }
-}
