@@ -212,3 +212,38 @@ $(document).ready(function () {
     $(this).toggleClass("is-open", 200);
   });
 });
+
+//コンタクトフォームのバリデーション
+$(document).ready(function() {
+  $(".page-contact__button").on("click", function(event) {
+      // エラーメッセージボックスを一旦非表示
+      $(".page-contact__error-box").hide();
+
+      // フォームが有効かどうかを示すフラグ
+      let isValid = true;
+
+      // 必須項目をチェックし、未入力の項目にエラースタイルを適用
+      $(".js-form").find("input[required], textarea[required], select[required]").each(function() {
+          if ($(this).val().trim() === "") {
+              // 未入力の場合、`use-invalid`クラスを追加してエラースタイルを適用
+              $(this).addClass("use-invalid");
+              isValid = false;
+          } else {
+              // 入力されている場合は`use-invalid`クラスを削除して正常スタイルに戻す
+              $(this).removeClass("use-invalid");
+          }
+      });
+
+      // フォームが無効な場合、エラーメッセージボックスを表示し、ページを最上部に移動
+      if (!isValid) {
+          $(".page-contact__error-box").show();
+
+          // ページを最上部に即座に移動
+          window.scrollTo(0, 0);
+
+          // フォーム送信をキャンセル
+          return false;
+      }
+  });
+});
+

@@ -97,9 +97,15 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
 
+input[type="checkbox"]:checked + .checkbox__text::after,
+input[type="checkbox"]:checked + .checkbox__consentーtext::after
+ {
+  opacity: 1;
+}
 input[type="submit"],
 input[type="button"],
 label,

@@ -21,6 +21,16 @@
     font-family: $third-font-family;
 }
 
+.button--layout {
+    text-align: left;
+    padding-left: rem(55);
+    @include mq(md){
+       margin-left: rem(80);
+       margin-right: none;
+    }
+
+}
+
 .button.slide::before {
     content: "";
     position: absolute;
@@ -55,6 +65,9 @@
   .button:hover span::after {
     border-color: $green-accent;
   }
+}
+.button--layout span::after{
+    left: 137%;
 }
 
 //スライド

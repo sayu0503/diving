@@ -1,0 +1,252 @@
+@use "global" as *;
+
+.page-contact {
+    position: relative;
+}
+
+.page-contact::before {
+    content: "";
+    background-image: url(../images/common/fish_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    top: rem(-23);
+    left: calc(50% - min(48vw, rem(308)));
+    z-index: -1;
+
+    @include mq(md) {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-35);
+        left: calc(50% - min(48vw, rem(619)));
+    }
+}
+
+.page-contact__content {
+    @include mq(md) {
+        width: 100%;
+        padding-inline: rem(104);
+    }
+}
+
+.page-contact__form {}
+
+.page-contact__list {}
+
+.page-contact__item {
+    border-bottom: 1px dotted $green-accent;
+    padding-bottom: rem(24);
+
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: rem(200) rem(480);
+        gap: rem(20);
+        padding-bottom: rem(40);
+    }
+}
+
+.page-contact__item:not(:first-child) {
+    margin-top: rem(24);
+
+    @include mq(md) {
+        margin-top: rem(15);
+    }
+}
+
+.page-contact__item--layout {
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.page-contact__label {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+
+    @include mq(md) {
+        align-items: baseline;
+        margin-top: rem(20);
+    }
+}
+
+.page-contact__label-text {
+    font-size: rem(16);
+    font-weight: $bold;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(23 / 16);
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(23 / 16);
+    }
+}
+
+.page-contact__required {
+    font-size: rem(12);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $white;
+    line-height: calc(17 / 12);
+    background-color: $red;
+    padding-block: rem(2);
+    padding-inline: rem(12);
+    letter-spacing: 0.4em;
+    text-indent: rem(4);
+}
+
+.page-contact__input,
+.page-contact__select,
+.page-contact__textarea {
+    width: 100%;
+    font-size: rem(16);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $black;
+    line-height: calc(23 / 16);
+    border: 1px solid $green-accent;
+    padding-top: rem(8);
+    padding-bottom: rem(7);
+    padding-inline: rem(16);
+    margin-top: rem(16);
+
+    @include mq(md) {
+        margin-top: rem(24);
+    }
+}
+
+.page-contact__input::placeholder,
+.page-contact__select::placeholder {
+    color: $green2;
+}
+
+.page-contact__select-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.page-contact__select-wrap::after {
+    content: url(../images/common/contact-arrow.svg);
+    position: absolute;
+    top: rem(15);
+    right: rem(8);
+    pointer-events: none;
+
+    @include mq(md) {
+        top: rem(17);
+    }
+}
+
+.page-contact__select {
+    font-size: rem(12);
+    padding-left: rem(7);
+
+    @include mq(md) {
+        margin-top: rem(15);
+    }
+}
+
+.page-contact__select:invalid {
+    font-size: rem(12);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $black;
+    line-height: calc(17 / 12);
+}
+
+.page-contact__textarea {
+    border: 1px solid $green-accent;
+    width: 100%;
+    margin-top: rem(16);
+    height: rem(200);
+    resize: none;
+    padding: rem(8) rem(16);
+
+    @include mq(md) {
+        margin-top: rem(22);
+    }
+}
+
+.page-contact__checkbox {
+    font-size: rem(16);
+}
+
+.page-contact__checkbox-group {
+    margin-top: rem(13);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+
+    @include mq(md) {
+        margin-top: rem(25);
+    }
+}
+
+.page-contact__button-block {
+    margin-top: rem(35);
+
+    @include mq(md) {
+        margin-top: rem(80);
+        padding-inline: rem(163);
+    }
+}
+
+.page-contact__button {
+    width: 100%;
+    margin-top: rem(24);
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.page-contact__error-box {
+    max-width: rem(345);
+    padding-bottom: rem(40);
+    text-align: center;
+    margin-inline: auto;
+    display: none;
+}
+
+.page-contact__error-message {
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $red;
+    line-height: calc(20 / 14);
+    display: inline-block;
+    text-align: left;
+    text-indent: -1em;
+    padding-left: 1em;
+}
+   /* ユーザーがフォーカスしている状態で、不正な入力があるときにエラースタイルを適用 */
+  .page-contact__input:invalid:focus,
+   .page-contact__textarea:invalid:focus,
+   .page-contact__select:invalid:focus {
+       border: 1px solid $red;
+   }
+
+  .use-invalid {
+     border-color: red;             /* 枠線を赤に */
+     background-color: rgba($color: $red, $alpha: 0.2);     /* 背景色を薄い赤に */
+ }
+
+/* 正常な入力の場合（`:valid` に対応するスタイル） */
+.page-contact__input:valid,
+.page-contact__textarea:valid {
+  border: 1px solid $green-accent; /* 正常時の枠線色 */
+  background-color: $white; /* 正常時の背景色 */
+  color: $black; /* 正常時の文字色 */
+}
+
+/* エラー時（use-invalid クラスが付与されている場合）のプレースホルダーのスタイル */
+.page-contact__input.use-invalid::placeholder,
+.page-contact__select.use-invalid::placeholder,
+.page-contact__textarea.use-invalid::placeholder{
+  color: white; /* エラー時のプレースホルダー色を白に変更 */
+}
