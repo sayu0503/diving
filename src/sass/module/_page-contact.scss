@@ -27,7 +27,7 @@
 .page-contact__content {
     @include mq(md) {
         width: 100%;
-        padding-inline: rem(104);
+        padding-inline: rem(190);
     }
 }
 
@@ -44,6 +44,7 @@
         grid-template-columns: rem(200) rem(480);
         gap: rem(20);
         padding-bottom: rem(40);
+        margin-top: rem(16);
     }
 }
 
@@ -211,6 +212,10 @@
     text-align: center;
     margin-inline: auto;
     display: none;
+    @include mq(md){
+       max-width: 100%;
+       padding-bottom: 0;
+    }
 }
 
 .page-contact__error-message {
@@ -223,6 +228,10 @@
     text-align: left;
     text-indent: -1em;
     padding-left: 1em;
+    @include mq(md){
+       margin-top: rem(35);
+       padding-left: rem(24);
+    }
 }
    /* ユーザーがフォーカスしている状態で、不正な入力があるときにエラースタイルを適用 */
   .page-contact__input:invalid:focus,
@@ -232,8 +241,8 @@
    }
 
   .use-invalid {
-     border-color: red;             /* 枠線を赤に */
-     background-color: rgba($color: $red, $alpha: 0.2);     /* 背景色を薄い赤に */
+     border-color: red;
+     background-color: rgba($color: $red, $alpha: 0.2);
  }
 
 /* 正常な入力の場合（`:valid` に対応するスタイル） */

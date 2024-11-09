@@ -218,10 +218,8 @@ $(document).ready(function() {
   $(".page-contact__button").on("click", function(event) {
       // エラーメッセージボックスを一旦非表示
       $(".page-contact__error-box").hide();
-
       // フォームが有効かどうかを示すフラグ
       let isValid = true;
-
       // 必須項目をチェックし、未入力の項目にエラースタイルを適用
       $(".js-form").find("input[required], textarea[required], select[required]").each(function() {
           if ($(this).val().trim() === "") {
@@ -233,17 +231,27 @@ $(document).ready(function() {
               $(this).removeClass("use-invalid");
           }
       });
+        // チェックボックスの必須項目バリデーション
+        if ($(".page-contact__checkbox-group input[type='checkbox']:checked").length === 0) {
+          $(".page-contact__checkbox-group input[type='checkbox']").addClass("use-invalid");
+          $(".page-contact__checkbox-error").show();
+          isValid = false;
+      }
 
       // フォームが無効な場合、エラーメッセージボックスを表示し、ページを最上部に移動
       if (!isValid) {
           $(".page-contact__error-box").show();
-
           // ページを最上部に即座に移動
           window.scrollTo(0, 0);
-
           // フォーム送信をキャンセル
           return false;
       }
   });
+  // チェックボックスの状態を監視し、1つでもチェックが入ればエラースタイルを解除
+  $(".page-contact__checkbox-group input[type='checkbox']").on("change", function() {
+    if ($(".page-contact__checkbox-group input[type='checkbox']:checked").length > 0) {
+        $(".page-contact__checkbox-group input[type='checkbox']").removeClass("use-invalid");
+    }
+});
 });
 

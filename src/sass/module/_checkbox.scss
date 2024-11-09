@@ -32,6 +32,17 @@
    }
 }
 
+.use-invalid + .checkbox__text::before {
+   border-color: $red;
+   background-color: rgba($color: $red, $alpha: 0.2);
+   content: "";
+}
+// チェックが入った際のスタイル
+.checked-valid + .checkbox__text::before {
+   border-color: $green-accent;
+   background-color: $white;
+}
+
 // チェックボックスのチェックマーク
 .checkbox__text::after {
    content: url(../images/common/contact-check.svg);
@@ -46,7 +57,7 @@
 
    @include mq(md) {
       top: 35%;
-      left: rem(1);
+      left: rem(2);
    }
 }
 
@@ -83,7 +94,7 @@
 
    @include mq(md) {
       margin-top: 2%;
-      top: 0;
+      top: 20%;
       left: 0;
    }
 }
@@ -102,6 +113,7 @@
    opacity: 0;
 
    @include mq(md) {
-      top: 35%;
+      top: 20%;
+      left: rem(8);
    }
 }
