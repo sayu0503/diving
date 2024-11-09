@@ -246,6 +246,8 @@ $(document).ready(function() {
           // フォーム送信をキャンセル
           return false;
       }
+       // フォームが有効な場合、page-thanks.htmlに遷移
+       window.location.href = "page-thanks.html";
   });
   // チェックボックスの状態を監視し、1つでもチェックが入ればエラースタイルを解除
   $(".page-contact__checkbox-group input[type='checkbox']").on("change", function() {

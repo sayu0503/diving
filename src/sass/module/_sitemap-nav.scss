@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.sitemap-nav__contents {
+    display: flex;
+    gap: rem(26);
+    margin-inline: auto;
+    max-width: rem(345);
+    @include mq(md) {
+        display: grid;
+        flex-direction: initial;
+        gap: rem(140);
+        grid-template-columns: 1fr 1fr;
+        max-width: 100%;
+    }
+}
+
+.sitemap-nav__flex {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    @include mq(md) {
+        flex-direction: initial;
+        gap: rem(144);
+    }
+}
+
+.sitemap-nav__flex:not(:first-child) {
+    @include mq(md) {
+        margin-left: rem(112);
+    }
+}
+
+.sitemap-nav__group {
+    width: rem(168);
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    @include mq(md) {
+        width: auto;
+    }
+}
+
+
+.sitemap-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include mq(md) {
+    }
+}
+
+.sitemap-nav__wrapper:first-child {
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+.sitemap-nav__title {
+    position: relative;
+    font-family: $base-font-family;
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: calc(18/16);
+    color: $green;
+    display: flex;
+    flex-grow: 1;
+    transition: opacity 0.4s;
+}
+@media (any-hover: hover) {
+.sitemap-nav__title:hover {
+    opacity: 0.7;
+}
+}
+
+.sitemap-nav__title::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/hitode-black.png);
+    width: rem(18);
+    height: rem(18);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.sitemap-nav__title a {
+    margin-left: rem(4);
+    flex-grow: 1;
+}
+
+.sitemap-nav__lists {
+    padding-left: rem(23);
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    margin-top: rem(24);
+}
+
+.sitemap-nav__list {
+    font-family: $base-font-family;
+    font-weight: $regular;
+    font-size: rem(16);
+    line-height: calc(18/16);
+    color: $green;
+    transition: opacity 0.4s;
+}
+
+@media (any-hover: hover) {
+.sitemap-nav__list:hover {
+    opacity: 0.7;
+}
+}
