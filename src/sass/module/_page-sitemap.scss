@@ -12,23 +12,14 @@
     width: rem(120);
     height: rem(55);
     top: rem(-24);
-    left: calc(50% - min(48vw,rem(173)));
-    z-index: 2;
+    left: calc(50% - min(48vw,rem(172)));
+    z-index: -1;
     @include mq(md){
-        background-image:none;
+        width: rem(301);
+        height: rem(138);
+        top: rem(-24);
+        left: calc(50% - min(48vw,rem(621)));
     }
 }
 
-
-.page-sitemap__content {
-    display: flex;
-    justify-content: center;
-    @include mq(md){
-       justify-content: start;
-    }
-}
-
-.page-sitemap__nav {
-
-}
 

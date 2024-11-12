@@ -10,14 +10,25 @@
         gap: rem(121);
     }
 }
-
+.footer-nav__contents--gap {
+    @include mq(md){
+       gap: rem(143);
+    }
+}
 .footer-nav__flex {
     display: flex;
     flex-direction: column;
     gap: rem(40);
+    padding-left: rem(15);
     @include mq(md) {
         flex-direction: initial;
         gap: rem(117);
+        padding-left: 0;
+    }
+}
+.footer-nav__flex--gap {
+    @include mq(md){
+       gap: rem(143);
     }
 }
 
@@ -34,6 +45,7 @@
     gap: rem(40);
     @include mq(md) {
         width: auto;
+        
     }
 }
 
@@ -66,11 +78,23 @@
     opacity: 0.7;
 }
 }
+.footer-nav__title--color {
+    color: $green;
+}
 
 .footer-nav__title::before {
     content: "";
     display: inline-block;
     background-image: url(../images/common/hitode.png);
+    width: rem(18);
+    height: rem(18);
+    background-size: contain;
+    vertical-align: middle;
+}
+.footer-nav__title--color::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/hitode-black.png);
     width: rem(18);
     height: rem(18);
     background-size: contain;
@@ -103,4 +127,7 @@
 .footer-nav__list:hover {
     opacity: 0.7;
 }
+}
+.footer-nav__list--color {
+    color: $green;
 }

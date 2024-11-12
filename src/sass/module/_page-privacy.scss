@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.page-privacy {
+    position: relative;
+}
+.page-privacy::before {
+    content: "";
+    background-image: url(../images/common/fish_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    top: rem(-23);
+    left: calc(50% - min(48vw, rem(308)));
+    z-index: -1;
+
+    @include mq(md) {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-35);
+        left: calc(50% - min(48vw, rem(619)));
+    }
+
+}
+
+.page-privacy__heading {
+    font-size: rem(24);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(35 / 24);
+}
+
+.page-privacy__content {
+    font-size: rem(16);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green;
+    line-height: calc(32 / 16);
+    @include mq(md){
+       max-width: rem(800);
+       margin-inline: auto;
+    }
+}
+.page-privacy__text-area {
+    margin-top: rem(40);
+}
+
+.page-privacy__top-group {
+
+}
+
+.page-privacy__top-lead {
+
+}
+.page-privacy__top-text-group {
+    margin-top: rem(32);
+    list-style-type: decimal;
+    padding-left: rem(23);
+    font-weight: $regular;
+}
+
+.page-privacy__middle-group {
+    margin-top: rem(32);
+}
+.page-privacy__middle-text-group {
+    list-style-type: decimal;
+    padding-left: rem(23);
+}
+.page-privacy__middle-lead:not(:first-child) {
+    margin-top: rem(32);
+}
+
+.page-privacy__bottom-group {
+    margin-top: rem(32);
+
+}
+.page-privacy__bottom-text-group {
+    list-style-type: decimal;
+    padding-left: rem(23);
+}
+.page-privacy__bottom-lead {
+
+}
+
+.page-privacy__bottom-text {
+
+}
+
+.page-privacy__last-lead {
+    margin-top: rem(50);
+
+}
+
