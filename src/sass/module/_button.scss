@@ -38,6 +38,9 @@
     border: 1px solid $green-accent;
     z-index: -1;
 }
+.button--design.slide::before {
+    border: 1px solid $white;
+}
 
 //矢印
 .button span {
@@ -65,11 +68,23 @@
   .button:hover span::after {
     border-color: $green-accent;
   }
+  .button--design:hover span::after {
+    border-color: $white;
+  }
 }
 .button--layout span::after{
     left: 137%;
 }
+.button--design {
+    background-color: $white;
+    border: rem(1) solid $white;
+}
+.button--design span::after{
+    left: 137%;
+    border-bottom: 0.0625rem solid $green-accent;
+    border-right: 0.0625rem solid $green-accent;
 
+}
 //スライド
  .button.slide {
      background: $green-accent;
@@ -78,9 +93,29 @@
      z-index: 1;
      overflow: visible;
  }
+ .button--design.slide {
+    background-color: $white;
+    color: $green-accent;
+    position: relative;
+     z-index: 1;
+     overflow: visible;
+ }
 
  .button.slide::after {
      background: $white;
+     position: absolute;
+     top: 0;
+     left: 0;
+     content: "";
+     width: 100%;
+     height: 100%;
+     transform: scale(0,1);
+     transform-origin: left top;
+     transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+     z-index: -1;
+ }
+ .button--design.slide::after {
+    background: $green-accent;
      position: absolute;
      top: 0;
      left: 0;
@@ -101,4 +136,11 @@
  .button.slide:hover::after {
      transform: scale(1,1);
  }
+ .button--design.slide:hover {
+    color: $white;
+}
+
+.button--design.slide:hover::after {
+    transform: scale(1,1);
+}
  }

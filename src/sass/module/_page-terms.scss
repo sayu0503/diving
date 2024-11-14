@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.page-privacy {
+.page-terms {
     position: relative;
 }
-.page-privacy::before {
+.page-terms::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
     background-repeat: no-repeat;
@@ -18,13 +18,13 @@
     @include mq(md) {
         width: rem(301);
         height: rem(138);
-        top: rem(-92);
+        top: rem(-71);
         left: calc(50% - min(48vw, rem(619)));
     }
 
 }
 
-.page-privacy__heading {
+.page-terms__heading {
     font-size: rem(24);
     font-weight: $medium;
     font-family: $base-font-family;
@@ -36,7 +36,7 @@
     }
 }
 
-.page-privacy__content {
+.page-terms__content {
     font-size: rem(16);
     font-weight: $regular;
     font-family: $base-font-family;
@@ -45,55 +45,58 @@
     @include mq(md){
        max-width: rem(799);
        margin-right: auto;
-       margin-left: rem(130);
+       margin-left: rem(140);
     }
 }
-.page-privacy__text-area {
+.page-terms__text-area {
     margin-top: rem(40);
 }
 
-.page-privacy__top-group {
+.page-terms__top-group {
 
 }
 
-.page-privacy__top-lead {
+.page-terms__top-lead {
 
 }
-.page-privacy__top-text-group {
+.page-terms__top-text-group {
     margin-top: rem(32);
     list-style-type: decimal;
     padding-left: rem(23);
     font-weight: $regular;
 }
 
-.page-privacy__middle-group {
+.page-terms__middle-group {
     margin-top: rem(32);
 }
-.page-privacy__middle-text-group {
+.page-terms__middle-text-group {
     list-style-type: decimal;
     padding-left: rem(23);
 }
-.page-privacy__middle-lead:not(:first-child) {
+.page-terms__middle-lead:not(:first-child) {
     margin-top: rem(32);
 }
 
-.page-privacy__bottom-group {
-    margin-top: rem(32);
-
-}
-.page-privacy__bottom-text-group {
-    list-style-type: decimal;
-    padding-left: rem(23);
-}
-.page-privacy__bottom-lead {
-
-}
-
-.page-privacy__bottom-text {
+.page-terms__bottom-group {
     line-break: strict;
 }
+.page-terms__bottom-text-group {
+    list-style-type: decimal;
+    padding-left: rem(23);
+}
+.page-terms__bottom-lead {
 
-.page-privacy__last-lead {
+}
+
+.page-terms__bottom-text {
+    line-break: strict;
+    margin-top: rem(32);
+}
+.page-terms__bottom-text:not(:first-child) {
+    margin-top: 0;
+}
+
+.page-terms__last-lead {
     margin-top: rem(32);
 
 }

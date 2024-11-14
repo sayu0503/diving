@@ -1,9 +1,9 @@
 @use "global" as *;
 
-
-.layout-privacy {
+.layout-404 {
     margin-top: rem(52);
     @include mq(md){
-       margin-top: rem(151);
+       margin-top: rem(120);
     }
+
 }

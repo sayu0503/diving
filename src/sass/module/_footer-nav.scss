@@ -2,7 +2,7 @@
 
 .footer-nav__contents {
     display: flex;
-    gap: rem(15);
+    gap: rem(11);
     justify-content: center;
     @include mq(md) {
         justify-content: flex-start;
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(40);
-    padding-left: rem(15);
+    padding-left: rem(4);
     @include mq(md) {
         flex-direction: initial;
         gap: rem(117);

@@ -39,7 +39,7 @@
 </head>
 
 <body id="top">
-  <div class="layout-container">
+  <div class="layout-container layout-container--color">
     <header class="top-header header" id="js-header">
       <div class="header__inner">
         <h1 class="header__title">
@@ -223,40 +223,31 @@
     <!-- 下層メインビュー -->
     <div class="sub-mv" id="js-mv">
       <div class="sub-mv__inner">
-        <div class="sub-mv__image">
-          <picture>
-            <source srcset="./assets/images/common/contact_mv.jpg" media="(min-width: 768px)">
-            <img src="./assets/images/common/contact_mv_sp.jpg" alt="波打際" decoding="async">
-          </picture>
-        </div>
-        <div class="sub-mv__title">
-          <h1 class="sub-mv__section-header">Contact</h1>
+        <div class="sub-mv__image sub-mv__image--height">
         </div>
       </div>
     </div>
     <!-- パンくず -->
     <div class="page-bredcrumb bredcrumb">
       <div class="bredcrumb__inner inner">
-        <div class="bredcrumb__text">パンくずリスト</div>
+        <div class="bredcrumb__text bredcrumb__text--color">パンくずリスト</div>
       </div>
     </div>
-    <!-- 下層サンクスページ -->
-     <div class="layout-thanks page-thanks">
-      <div class="page-thanks__inner inner">
-        <div class="page-thanks__text-block">
-          <p class="page-thanks__text-item">お問い合わせ内容を送信完了しました。
-          </p>
-          <p class="page-thanks__text-item">このたびは、お問い合わせ頂き<br class="u-mobile">誠にありがとうございます。<br>
-            お送り頂きました内容を確認の上、<br class="u-mobile">3営業日以内に折り返しご連絡させて頂きます。<br>
-            また、ご記入頂いたメールアドレスへ、<br class="u-mobile">自動返信の確認メールをお送りしております。
-          </p>
-
+    <!-- 下層404-->
+     <div class="layout-404 page-404">
+      <div class="page-404__inner inner">
+        <div class="page-404__container">
+        <h2 class="page-404__heading">404</h2>
+        <p class="page-404__text">申し訳ありません。<br>お探しのページが見つかりません。</p>
+        <div class="page-404__button">
+          <a href="#" class="button slide button--design"><span>Page TOP</span></a>
         </div>
+      </div>
       </div>
      </div>
   </main>
   <!--フッター-->
-  <footer class="thanks-footer footer">
+  <footer class="page-404-footer footer">
     <div class="fooer__inner inner">
       <div class="footer__wrapper">
         <div class="footer__container">
@@ -279,7 +270,7 @@
                 <div class="footer-nav__flex">
                   <div class="footer-nav__group">
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">キャンペーン</a>
                       </li>
                       <li class="footer-nav__body">
@@ -297,14 +288,14 @@
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">私たちについて</a>
                       </li>
                     </ul>
                   </div>
                   <div class="footer-nav__group">
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">ダイビング情報</a>
                       </li>
                       <li class="footer-nav__body">
@@ -322,7 +313,7 @@
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">ブログ</a>
                       </li>
                     </ul>
@@ -333,12 +324,12 @@
                 <div class="footer-nav__flex">
                   <div class="footer-nav__group">
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">お客様の声</a>
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">料金一覧</a>
                       </li>
                       <li class="footer-nav__body">
@@ -358,22 +349,22 @@
                   </div>
                   <div class="footer-nav__group">
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">よくある質問</a>
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">プライバシー<br class="u-mobile">ポリシー</a>
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">利用規約</a>
                       </li>
                     </ul>
                     <ul class="footer-nav__wrapper">
-                      <li class="footer-nav__title">
+                      <li class="footer-nav__title ">
                         <a href="#">お問い合わせ</a>
                       </li>
                     </ul>
@@ -389,8 +380,7 @@
       <small>Copyright © 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
     </div>
   </footer>
-  <a href="#top" class="page-top-button js-page-top" aria-label="ページトップに移動する"></a>
-</div>
 </body>
+</div>
 
 </html>
