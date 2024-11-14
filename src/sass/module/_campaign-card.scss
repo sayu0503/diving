@@ -150,17 +150,19 @@
     text-align: center;
     margin-top: rem(32);
 }
-
-.campaign-card__date {
+.campaign-card__meta,
+.campaign-card__meta time {
     font-size: rem(16);
     font-weight: $bold;
     font-family: $fourth-font-family;
     color: $green-accent;
     line-height: calc(18 / 16);
+}
+.campaign-card__meta span {
 
-    @include mq(md) {
-        margin-left: rem(-16);
-    }
+}
+.campaign-card__date {
+    
 }
 
 .campaign-card__comment {
