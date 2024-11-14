@@ -4,6 +4,7 @@
 .page-voice {
     position: relative;
 }
+
 .page-voice::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
@@ -35,10 +36,6 @@
        grid-template-columns: 1fr 1fr;
        gap: rem(80) rem(40);
     }
-
-}
-
-.page-voice-cards__item {
 
 }
 

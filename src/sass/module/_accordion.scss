@@ -34,7 +34,6 @@
     }
 }
 
-/* タイトル横のプラスマーク縦線 */
 .accordion__header::before {
     position: absolute;
     content: "";
@@ -52,7 +51,6 @@
     }
 }
 
-/* タイトル横のプラスマーク横線 */
 .accordion__header::after {
     position: absolute;
     content: "";
@@ -69,12 +67,10 @@
     }
 }
 
-/* アコーディオンが開いたとき縦線の変化 */
 .accordion__header.is-open::before {
     transform: rotate(180deg);
 }
 
-/* アコーディオンが開いたとき横線の変化 */
 .accordion__header.is-open::after {
     opacity: 0;
 }

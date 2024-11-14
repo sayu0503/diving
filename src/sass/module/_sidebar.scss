@@ -2,13 +2,16 @@
 
 .sidebar__items {
     padding-inline: rem(25);
+
     @include mq(md) {
         padding-inline: 0;
     }
 }
-.sidebar__items--inner{
+
+.sidebar__items--inner {
     padding-inline: rem(40);
 }
+
 .sidebar__item:not(:first-child) {
     margin-top: rem(82);
 }
@@ -192,7 +195,7 @@
 }
 
 .sidebar__campaign-card__first-price {
-     position: relative;
+    position: relative;
     font-family: $fourth-font-family;
     font-weight: $bold;
     font-size: rem(20);
@@ -241,6 +244,7 @@
 }
 
 @media (any-hover: hover) {
+
     .sidebar__archive-calendar:hover,
     .sidebar__archive-month:hover {
         opacity: 0.6;
@@ -258,7 +262,8 @@
     margin-top: rem(7);
     transition: all 0.3s;
 }
-.sidebar__archive-calendar.open::before{
+
+.sidebar__archive-calendar.open::before {
     transform: rotate(-90deg);
 }
 

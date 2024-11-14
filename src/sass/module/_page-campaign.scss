@@ -4,7 +4,7 @@
     position: relative;
 }
 
-.page-campaign::before{
+.page-campaign::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
     background-repeat: no-repeat;
@@ -13,13 +13,14 @@
     width: rem(120);
     height: rem(55);
     top: rem(-23);
-    left: calc(50% - min(48vw,rem(308)));
+    left: calc(50% - min(48vw, rem(308)));
     z-index: -1;
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(301);
         height: rem(138);
         top: rem(-70);
-        left: calc(50% - min(48vw,rem(621)));
+        left: calc(50% - min(48vw, rem(621)));
     }
 }
 
@@ -29,17 +30,18 @@
     grid-template-columns: 100%;
     gap: rem(40);
     padding-inline: rem(33);
-    @include mq(md){
-       grid-template-columns: repeat(2, 1fr);
-       gap: rem(80) rem(40);
-       padding-inline: 0;
+
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(80) rem(40);
+        padding-inline: 0;
     }
 }
 
 .page-campaign__pagenavi {
     margin-top: rem(77);
-    @include mq(md){
-       margin-top: rem(89);
+
+    @include mq(md) {
+        margin-top: rem(89);
     }
 }
-

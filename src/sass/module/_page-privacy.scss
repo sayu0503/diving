@@ -3,6 +3,7 @@
 .page-privacy {
     position: relative;
 }
+
 .page-privacy::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
@@ -21,7 +22,6 @@
         top: rem(-92);
         left: calc(50% - min(48vw, rem(619)));
     }
-
 }
 
 .page-privacy__heading {
@@ -30,9 +30,10 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(35 / 24);
-    @include mq(md){
-       font-size: rem(32);
-       line-height: calc(46 / 32);
+
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: calc(46 / 32);
     }
 }
 
@@ -42,23 +43,18 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(32 / 16);
-    @include mq(md){
-       max-width: rem(799);
-       margin-right: auto;
-       margin-left: rem(130);
+
+    @include mq(md) {
+        max-width: rem(799);
+        margin-right: auto;
+        margin-left: rem(130);
     }
 }
+
 .page-privacy__text-area {
     margin-top: rem(40);
 }
 
-.page-privacy__top-group {
-
-}
-
-.page-privacy__top-lead {
-
-}
 .page-privacy__top-text-group {
     margin-top: rem(32);
     list-style-type: decimal;
@@ -69,10 +65,12 @@
 .page-privacy__middle-group {
     margin-top: rem(32);
 }
+
 .page-privacy__middle-text-group {
     list-style-type: decimal;
     padding-left: rem(23);
 }
+
 .page-privacy__middle-lead:not(:first-child) {
     margin-top: rem(32);
 }
@@ -81,12 +79,10 @@
     margin-top: rem(32);
 
 }
+
 .page-privacy__bottom-text-group {
     list-style-type: decimal;
     padding-left: rem(23);
-}
-.page-privacy__bottom-lead {
-
 }
 
 .page-privacy__bottom-text {
@@ -95,6 +91,4 @@
 
 .page-privacy__last-lead {
     margin-top: rem(32);
-
 }
-

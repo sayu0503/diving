@@ -2,7 +2,8 @@
 
 .thanks-footer {
     margin-top: rem(145);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(120);
     }
 }

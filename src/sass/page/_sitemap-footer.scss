@@ -2,7 +2,8 @@
 
 .sitemap-footer {
     margin-top: rem(107);
-    @include mq(md){
-       margin-top: rem(160);
+
+    @include mq(md) {
+        margin-top: rem(160);
     }
 }

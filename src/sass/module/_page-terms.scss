@@ -3,6 +3,7 @@
 .page-terms {
     position: relative;
 }
+
 .page-terms::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
@@ -21,7 +22,6 @@
         top: rem(-71);
         left: calc(50% - min(48vw, rem(619)));
     }
-
 }
 
 .page-terms__heading {
@@ -30,9 +30,10 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(35 / 24);
-    @include mq(md){
-       font-size: rem(32);
-       line-height: calc(46 / 32);
+
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: calc(46 / 32);
     }
 }
 
@@ -42,23 +43,18 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(32 / 16);
-    @include mq(md){
-       max-width: rem(799);
-       margin-right: auto;
-       margin-left: rem(140);
+
+    @include mq(md) {
+        max-width: rem(799);
+        margin-right: auto;
+        margin-left: rem(140);
     }
 }
+
 .page-terms__text-area {
     margin-top: rem(40);
 }
 
-.page-terms__top-group {
-
-}
-
-.page-terms__top-lead {
-
-}
 .page-terms__top-text-group {
     margin-top: rem(32);
     list-style-type: decimal;
@@ -69,10 +65,12 @@
 .page-terms__middle-group {
     margin-top: rem(32);
 }
+
 .page-terms__middle-text-group {
     list-style-type: decimal;
     padding-left: rem(23);
 }
+
 .page-terms__middle-lead:not(:first-child) {
     margin-top: rem(32);
 }
@@ -80,18 +78,17 @@
 .page-terms__bottom-group {
     line-break: strict;
 }
+
 .page-terms__bottom-text-group {
     list-style-type: decimal;
     padding-left: rem(23);
-}
-.page-terms__bottom-lead {
-
 }
 
 .page-terms__bottom-text {
     line-break: strict;
     margin-top: rem(32);
 }
+
 .page-terms__bottom-text:not(:first-child) {
     margin-top: 0;
 }
@@ -100,4 +97,3 @@
     margin-top: rem(32);
 
 }
-

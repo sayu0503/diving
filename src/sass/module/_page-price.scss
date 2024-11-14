@@ -103,8 +103,9 @@
     color: $green;
     line-height: calc(24 / 16);
     height: rem(60);
-    @include mq(md){
-       height: rem(58);
+
+    @include mq(md) {
+        height: rem(58);
     }
 }
 
@@ -114,7 +115,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include mq(md){
+
+    @include mq(md) {
         padding-left: rem(15);
         justify-content: baseline;
     }

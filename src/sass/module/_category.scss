@@ -4,20 +4,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(18) rem(21);
-    @include mq(md){
+
+    @include mq(md) {
         display: flex;
         grid-template-columns: none;
         gap: rem(32);
         flex-wrap: wrap;
     }
 }
+
 .category__item {
     text-align: center;
     display: inline-block;
-    @include mq(md){
+
+    @include mq(md) {
         width: min(rem(162), 100%);
     }
 }
+
 .category__item-text {
     border: 1px solid $green-accent;
     padding-block: rem(4.5);
@@ -33,7 +37,6 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* 最初の要素を常にホバー状態にする */
 .category__item:first-child .category__item-text {
     background-color: $green-accent;
     color: $white;
@@ -46,4 +49,3 @@
         color: $white;
     }
 }
-

@@ -31,10 +31,6 @@
     }
 }
 
-.page-contact__form {}
-
-.page-contact__list {}
-
 .page-contact__item {
     border-bottom: 1px dotted $green-accent;
     padding-bottom: rem(24);
@@ -212,9 +208,10 @@
     text-align: center;
     margin-inline: auto;
     display: none;
-    @include mq(md){
-       max-width: 100%;
-       padding-bottom: 0;
+
+    @include mq(md) {
+        max-width: 100%;
+        padding-bottom: 0;
     }
 }
 
@@ -228,34 +225,33 @@
     text-align: left;
     text-indent: -1em;
     padding-left: 1em;
-    @include mq(md){
-       margin-top: rem(35);
-       padding-left: rem(24);
+
+    @include mq(md) {
+        margin-top: rem(35);
+        padding-left: rem(24);
     }
 }
-   /* ユーザーがフォーカスしている状態で、不正な入力があるときにエラースタイルを適用 */
-  .page-contact__input:invalid:focus,
-   .page-contact__textarea:invalid:focus,
-   .page-contact__select:invalid:focus {
-       border: 1px solid $red;
-   }
 
-  .use-invalid {
-     border-color: red;
-     background-color: rgba($color: $red, $alpha: 0.2);
- }
-
-/* 正常な入力の場合（`:valid` に対応するスタイル） */
-.page-contact__input:valid,
-.page-contact__textarea:valid {
-  border: 1px solid $green-accent; /* 正常時の枠線色 */
-  background-color: $white; /* 正常時の背景色 */
-  color: $black; /* 正常時の文字色 */
+.page-contact__input:invalid:focus,
+.page-contact__textarea:invalid:focus,
+.page-contact__select:invalid:focus {
+    border: 1px solid $red;
 }
 
-/* エラー時（use-invalid クラスが付与されている場合）のプレースホルダーのスタイル */
+.use-invalid {
+    border-color: $red;
+    background-color: rgba($color: $red, $alpha: 0.2);
+}
+
+.page-contact__input:valid,
+.page-contact__textarea:valid {
+    border: 1px solid $green-accent;
+    background-color: $white;
+    color: $black;
+}
+
 .page-contact__input.use-invalid::placeholder,
 .page-contact__select.use-invalid::placeholder,
-.page-contact__textarea.use-invalid::placeholder{
-  color: white; /* エラー時のプレースホルダー色を白に変更 */
+.page-contact__textarea.use-invalid::placeholder {
+    color: white;
 }

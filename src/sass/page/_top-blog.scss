@@ -2,7 +2,8 @@
 
 .top-blog {
     padding-top: rem(78);
-    @include mq(md){
+
+    @include mq(md) {
         padding-top: rem(99);
-   }
+    }
 }

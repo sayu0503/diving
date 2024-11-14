@@ -10,7 +10,8 @@
     line-height: calc(40/32);
     font-weight: $regular;
     color: $green;
-    @include mq(md){
+
+    @include mq(md) {
         font-size: rem(40);
         line-height: calc(40/40);
     }
@@ -27,25 +28,26 @@
     line-height: calc(18/12);
     color: $green-accent;
     margin-top: rem(4);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(6);
     }
 }
 
 .section-header__title--white {
-    @include mq(md){
+    @include mq(md) {
         color: $white;
     }
 }
 
 .section-header__title--white::first-letter {
-    @include mq(md){
+    @include mq(md) {
         color: $white;
     }
 }
 
 .section-header__subtitle--white {
-    @include mq(md){
+    @include mq(md) {
         color: $white;
     }
 }

@@ -2,8 +2,9 @@
 
 .layout-404 {
     margin-top: rem(52);
-    @include mq(md){
-       margin-top: rem(120);
+
+    @include mq(md) {
+        margin-top: rem(120);
     }
 
 }

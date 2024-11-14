@@ -5,56 +5,59 @@
 }
 
 .blog::before {
-    @include mq(md){
-            content: "";
-            background-image: url(../images/common/blog_img_bg.jpg);
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;
-            width: 100%;
-            height: rem(500);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+    @include mq(md) {
+        content: "";
+        background-image: url(../images/common/blog_img_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        width: 100%;
+        height: rem(500);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
+}
 
 .blog:after {
-    @include mq(md){
+    @include mq(md) {
         content: "";
         display: block;
         background-image: url(../images/common/fish.png);
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        left: calc(50% - min(48vw,rem(621)));
+        left: calc(50% - min(48vw, rem(621)));
         top: rem(24);
         width: rem(437);
         height: rem(201);
     }
 }
 
- .blog__contents {
-     margin-top: rem(33);
-     @include mq(md){
-         margin-top: rem(82);
-     }
- }
+.blog__contents {
+    margin-top: rem(33);
 
- .blog-cards {
-     display: grid;
-     gap: rem(43);
-     grid-template-columns: repeat(1,1fr);
-     place-items: center;
-     @include mq(md){
-        grid-template-columns: repeat(3,1fr);
-     }
- }
+    @include mq(md) {
+        margin-top: rem(82);
+    }
+}
+
+.blog-cards {
+    display: grid;
+    gap: rem(43);
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+
+    @include mq(md) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 .blog__btn {
     margin-top: rem(38);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(80);
     }
 }

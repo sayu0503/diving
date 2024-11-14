@@ -4,7 +4,8 @@
     position: relative;
     z-index: 1;
 }
-.page-about::before{
+
+.page-about::before {
     content: "";
     background-image: url(../images/common/fish_2.png);
     background-repeat: no-repeat;
@@ -13,13 +14,14 @@
     width: rem(120);
     height: rem(55);
     top: rem(-24);
-    left: calc(50% - min(48vw,rem(308)));
+    left: calc(50% - min(48vw, rem(308)));
     z-index: 2;
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(301);
         height: rem(138);
         top: rem(-70);
-        left: calc(50% - min(48vw,rem(621)));
+        left: calc(50% - min(48vw, rem(621)));
     }
 }
 

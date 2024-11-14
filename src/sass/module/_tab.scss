@@ -57,7 +57,6 @@
     }
 }
 
-// ボタンごとの画像指定
 .tab__button--whale::before {
     background-image: url(../images/common/whale-green.png);
 }
@@ -69,7 +68,6 @@
 .tab__button--small-fish::before {
     background-image: url(../images/common/small-fish-green.png);
 }
-
 
 .tab__button.is-active {
     cursor: pointer;
@@ -92,18 +90,15 @@
 
 .tab__button--whale.is-active::before {
     background-image: url(../images/common/whale-white.png);
-
 }
 
 .tab__button--shark.is-active::before {
     background-image: url(../images/common/shark-white.png);
-
 }
 
 .tab__button--small-fish.is-active::before {
     background-image: url(../images/common/small-fish-white.png);
 }
-
 
 .tab__contents {
     margin-top: rem(16);
@@ -131,8 +126,6 @@
     }
 }
 
-.tab__text-block {}
-
 .tab__title {
     border-bottom: 1px solid $green-accent;
     padding-bottom: rem(8);
@@ -141,8 +134,6 @@
     font-family: $base-font-family;
     color: $green;
     line-height: calc(24 / 24);
-
-    @include mq(md) {}
 }
 
 .tab__text {

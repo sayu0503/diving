@@ -16,7 +16,6 @@
    padding-left: rem(22);
 }
 
-// チェックボックスの枠線
 .checkbox__text::before {
    content: "";
    position: absolute;
@@ -27,23 +26,23 @@
    height: rem(14);
    border: 1px solid $green-accent;
    background: $white;
-   @include mq(md){
-       top: 46%;
+
+   @include mq(md) {
+      top: 46%;
    }
 }
 
-.use-invalid + .checkbox__text::before {
+.use-invalid+.checkbox__text::before {
    border-color: $red;
    background-color: rgba($color: $red, $alpha: 0.2);
    content: "";
 }
-// チェックが入った際のスタイル
-.checked-valid + .checkbox__text::before {
+
+.checked-valid+.checkbox__text::before {
    border-color: $green-accent;
    background-color: $white;
 }
 
-// チェックボックスのチェックマーク
 .checkbox__text::after {
    content: url(../images/common/contact-check.svg);
    position: absolute;
@@ -80,7 +79,6 @@
    }
 }
 
-// チェックボックスの枠線
 .checkbox__consentーtext::before {
    content: "";
    position: absolute;
@@ -99,7 +97,6 @@
    }
 }
 
-// チェックボックスのチェックマーク
 .checkbox__consentーtext::after {
    content: "";
    position: absolute;

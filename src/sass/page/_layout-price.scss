@@ -2,7 +2,8 @@
 
 .layout-price {
     margin-top: rem(52);
-    @include mq(md){
-       margin-top: rem(156);
+
+    @include mq(md) {
+        margin-top: rem(156);
     }
 }

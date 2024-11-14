@@ -7,17 +7,21 @@
 .sub-mv__image {
     z-index: 1;
     aspect-ratio: 375/460;
-    @include mq(md){
-       aspect-ratio: 1440/548;
+
+    @include mq(md) {
+        aspect-ratio: 1440/548;
     }
 
 }
+
 .sub-mv__image--height {
     height: rem(80);
-    @include mq(md){
-       height: rem(90);
+
+    @include mq(md) {
+        height: rem(90);
     }
 }
+
 .sub-mv__title {
     position: absolute;
     top: 50%;
@@ -27,17 +31,18 @@
     width: 100%;
     z-index: 2;
 }
+
 .sub-mv__section-header {
     font-weight: $normal;
-    font-family:$fourth-font-family;
+    font-family: $fourth-font-family;
     color: $white;
     letter-spacing: 0;
     font-size: rem(40);
     line-height: calc(48 / 40);
     z-index: 20;
-    @include mq(md){
+
+    @include mq(md) {
         font-size: rem(80);
         line-height: calc(100 / 80);
     }
 }
-

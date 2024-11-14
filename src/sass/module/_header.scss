@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .header.is-dark {
-    background-color: #9A9A9A;
+    background-color: $gray4;
 }
 
 .header.is-open {
-    background-color: #408F95;
+    background-color: $green-accent;
 }
 
 .header {
@@ -19,7 +19,8 @@
     left: 0;
     right: 0;
     transition: background-color 0.3s ease;
-    @include mq(md){
+
+    @include mq(md) {
         height: rem(90);
     }
 }
@@ -30,21 +31,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 rem(13);
-    @include mq(md){
+
+    @include mq(md) {
         padding-left: rem(36);
         padding-right: rem(41);
     }
 }
 
 .header__drawer {
-    @include mq(md){
+    @include mq(md) {
         display: none;
     }
 }
 
 .header__pc-nav {
     display: none;
-    @include mq(md){
+
+    @include mq(md) {
         height: inherit;
         display: block;
     }
@@ -52,7 +55,8 @@
 
 .header__title {
     margin-top: rem(6);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(8);
     }
 }
@@ -63,7 +67,8 @@
     position: relative;
     z-index: 9999;
     width: rem(107);
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(140);
     }
 }

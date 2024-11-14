@@ -3,7 +3,8 @@
 .information {
     padding: rem(80) 0 rem(86);
     background-color: $green2;
-    @include mq(md){
+
+    @include mq(md) {
         padding: rem(100) 0 rem(77);
     }
 }
@@ -11,7 +12,8 @@
 .information__contents {
     max-width: rem(600);
     margin-inline: auto;
-    @include mq(md){
+
+    @include mq(md) {
         max-width: 100%;
         display: flex;
         gap: rem(48);
@@ -20,7 +22,7 @@
 }
 
 .information__section-header {
-    @include mq(md){
+    @include mq(md) {
         padding-right: rem(4);
     }
 }
@@ -29,7 +31,8 @@
     position: relative;
     width: 100%;
     margin-top: rem(27);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(0);
     }
 }
@@ -40,14 +43,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include mq(md){
+
+    @include mq(md) {
         aspect-ratio: 540 / 356;
     }
 }
 
 .information__body {
     margin-top: rem(25);
-    @include mq(md){
+
+    @include mq(md) {
         max-width: 46%;
         width: 100%;
         margin-top: rem(61);
@@ -62,7 +67,8 @@
     color: $green;
     border-bottom: rem(1) solid $green-accent;
     padding-bottom: rem(4);
-    @include mq(md){
+
+    @include mq(md) {
         font-size: rem(24);
         padding-bottom: rem(6);
     }
@@ -75,7 +81,8 @@
     font-size: rem(16);
     line-height: calc(24/16);
     color: $green;
-    @include mq(md){
+
+    @include mq(md) {
         padding-right: rem(2);
         max-width: 99%;
     }
@@ -83,9 +90,8 @@
 
 .information__btn {
     margin-top: rem(65);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(41);
     }
 }
-
-

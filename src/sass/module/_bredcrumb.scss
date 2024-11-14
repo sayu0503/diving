@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .bredcrumb__text {
-    font-size:rem(14);
+    font-size: rem(14);
     font-weight: $regular;
     font-family: $base-font-family;
     color: $green;
@@ -12,4 +12,3 @@
 .bredcrumb__text--color {
     color: $white;
 }
-

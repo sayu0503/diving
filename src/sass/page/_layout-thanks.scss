@@ -2,7 +2,8 @@
 
 .layout-thanks {
     margin-top: rem(50);
-    @include mq(md){
-       margin-top: rem(148);
+
+    @include mq(md) {
+        margin-top: rem(148);
     }
 }
