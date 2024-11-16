@@ -235,12 +235,16 @@
     font-family: $base-font-family;
     color: $green-accent;
     line-height: calc(35 / 24);
+    display: none;
     display: flex;
     align-items: center;
     gap: rem(10);
     justify-content: start;
     cursor: pointer;
     transition: all 0.3s;
+}
+.sidebar__archive-month.is-open {
+    display: block;
 }
 
 @media (any-hover: hover) {
@@ -259,12 +263,13 @@
     width: rem(22);
     height: rem(18);
     background-image: url(../images/common/arrow-bottom.png);
+    transform: rotate(-90deg);
     margin-top: rem(7);
     transition: all 0.3s;
 }
 
-.sidebar__archive-calendar.open::before {
-    transform: rotate(-90deg);
+.sidebar__archive-calendar.is-open::before {
+    transform: rotate(0deg);
 }
 
 

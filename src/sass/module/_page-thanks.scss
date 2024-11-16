@@ -33,9 +33,13 @@
     font-weight: $regular;
     font-family: $base-font-family;
     color: $green;
-    line-height: calc(23 / 16);
+    line-height: calc(18 / 16);
+}
+
+.page-thanks__text-item02 {
+    line-height: calc(23  / 16);
 }
 
 .page-thanks__text-item:not(:first-child) {
-    margin-top: rem(36);
+    margin-top: rem(39);
 }

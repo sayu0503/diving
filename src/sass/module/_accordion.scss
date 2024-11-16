@@ -89,7 +89,7 @@
     display: none;
 
     @include mq(md) {
-        padding: rem(40);
+        padding: rem(39);
         margin-top: rem(16);
     }
 }

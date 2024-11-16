@@ -59,7 +59,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -102,11 +102,11 @@ input[type="radio"] {
   position: absolute;
 }
 
-input[type="checkbox"]:checked + .checkbox__text::after,
-input[type="checkbox"]:checked + .checkbox__consentーtext::after
- {
+input[type="checkbox"]:checked+.checkbox__text::after,
+input[type="checkbox"]:checked+.checkbox__consent--text::after {
   opacity: 1;
 }
+
 input[type="submit"],
 input[type="button"],
 label,
@@ -125,4 +125,3 @@ a {
   color: inherit;
   transition: opacity 0.3s;
 }
-

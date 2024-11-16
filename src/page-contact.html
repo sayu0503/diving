@@ -238,15 +238,17 @@
     <!-- パンくず -->
     <div class="page-bredcrumb bredcrumb">
       <div class="bredcrumb__inner inner">
-        <div class="bredcrumb__text">パンくずリスト</div>
+        <p class="bredcrumb__text">
+          <a href="index.html" class="berdcrumb__link">TOP</a></p>
+        <p class="bredcrumb__text">お問い合わせ</p>
       </div>
     </div>
 
     <!-- 下層Contact -->
-    <div class="layout-contact page-contact">
+    <div class="layout-page-contact page-contact">
       <div class="page-contact__inner inner">
         <div class="page-contact__content">
-          <form class="page-contact__form js-form" action="">
+          <form class="page-contact__form js-form">
             <div class="page-contact__error-box">
               <p class="page-contact__error-message">
                 ※必須項目が入力されていません。<br class="u-mobile">入力してください。
@@ -327,11 +329,11 @@
               <!-- 同意チェックボックス -->
               <label class="page-contact__checkbox">
                 <input type="checkbox" name="term" value="個人情報の取り扱いについて同意のうえ送信します。" required>
-                <div class="checkbox__consentーtext">個人情報の取り扱いについて同意のうえ送信します。</div>
+                <span class="checkbox__consent--text">個人情報の取り扱いについて同意のうえ送信します。</span>
               </label>
               <!-- 送信ボタン -->
               <button class="page-contact__button" type="submit">
-                <p class="button button--layout slide"><span>Send</span></p>
+                <span class="button button--layout slide"><span>Send</span></span>
               </button>
             </div>
           </form>

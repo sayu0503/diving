@@ -118,7 +118,7 @@
 
     @include mq(md) {
         padding-left: rem(15);
-        justify-content: baseline;
+        justify-content: flex-start;
     }
 }
 

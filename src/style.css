@@ -1863,7 +1863,7 @@ html {
 }
 
 .voice-card__wrap {
-	flex-shrink: none;
+	flex-shrink: 0;
 	max-width: 17.25rem;
 }
 

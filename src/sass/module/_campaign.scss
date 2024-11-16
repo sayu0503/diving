@@ -25,5 +25,7 @@
 .campaign__title--size {
     @include mq(md) {
         font-size: rem(24);
+        line-height: calc(35 / 24);
+        padding-bottom: rem(5);
     }
 }

@@ -1,5 +1,27 @@
 @use "global" as *;
 
+.bredcrumb__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bredcrumb__text {
+    display: flex;
+    align-items: center;
+}
+
+.bredcrumb__text:not(:last-of-type)::after {
+    display: inline-block;
+    transform: rotate(45deg);
+    width: rem(7);
+    height: rem(7);
+    margin-left: rem(6);
+    margin-right: rem(8);
+    border-top: 1px solid $green;
+    border-right: 1px solid $green;
+    content: '';
+}
+
 .bredcrumb__text {
     font-size: rem(14);
     font-weight: $regular;
@@ -9,6 +31,12 @@
     letter-spacing: 0;
 }
 
-.bredcrumb__text--color {
+.bredcrumb__text--color,
+.berdcrumb__link--color {
     color: $white;
+}
+.bredcrumb__text--color:not(:last-of-type)::after {
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+    content: '';
 }

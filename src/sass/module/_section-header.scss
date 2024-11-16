@@ -33,6 +33,9 @@
         margin-top: rem(6);
     }
 }
+.section-header__subtitle--layout {
+    margin-top: rem(10);
+}
 
 .section-header__title--white {
     @include mq(md) {
@@ -50,4 +53,8 @@
     @include mq(md) {
         color: $white;
     }
+}
+
+.section-header__title--line-height {
+    line-height: calc(32 / 32);
 }

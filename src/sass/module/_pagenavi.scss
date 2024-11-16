@@ -20,6 +20,8 @@
     background-color: $white;
     transition: 0.3s ease;
     border: 1px solid $green-accent;
+    font-family: $fourth-font-family;
+    line-height: calc(19 / 16);
 }
 
 @media (any-hover: hover) {

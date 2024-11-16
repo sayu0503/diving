@@ -63,7 +63,7 @@
 /******************************************
   同意チェックボックス
 *******************************************/
-.checkbox__consentーtext {
+.checkbox__consent--text {
    font-size: rem(14);
    font-weight: $regular;
    font-family: $base-font-family;
@@ -73,13 +73,14 @@
    margin-inline: auto;
    padding-left: rem(36);
    max-width: rem(295);
+   display: block;
 
    @include mq(md) {
       max-width: none;
    }
 }
 
-.checkbox__consentーtext::before {
+.checkbox__consent--text::before {
    content: "";
    position: absolute;
    top: 27%;
@@ -97,7 +98,7 @@
    }
 }
 
-.checkbox__consentーtext::after {
+.checkbox__consent--text::after {
    content: "";
    position: absolute;
    top: 13%;

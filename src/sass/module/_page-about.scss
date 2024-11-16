@@ -14,7 +14,7 @@
     width: rem(120);
     height: rem(55);
     top: rem(-24);
-    left: calc(50% - min(48vw, rem(308)));
+    left: calc(50% - min(48vw, rem(173)));
     z-index: 2;
 
     @include mq(md) {

@@ -43,6 +43,13 @@
         width: min(100%, rem(300));
     }
 }
+@media (any-hover: hover) {
+   .tab__button:hover {
+    cursor: pointer;
+    background-color: $green-accent;
+    color: $white;
+   }
+}
 
 .tab__button--whale::before,
 .tab__button--shark::before,
@@ -54,6 +61,7 @@
         background-size: cover;
         width: rem(64);
         height: rem(64);
+        transition: all 0.3s, color 0.3s;
     }
 }
 
@@ -68,6 +76,19 @@
 .tab__button--small-fish::before {
     background-image: url(../images/common/small-fish-green.png);
 }
+
+@media (any-hover: hover) {
+    .tab__button--whale:hover::before {
+        background-image: url(../images/common/whale-white.png);
+    }
+    .tab__button--shark:hover::before {
+        background-image: url(../images/common/shark-white.png);
+    }
+    .tab__button--small-fish:hover::before {
+        background-image: url(../images/common/small-fish-white.png);
+    }
+}
+
 
 .tab__button.is-active {
     cursor: pointer;
@@ -113,6 +134,7 @@
     padding-block: rem(24);
     padding-inline: rem(24);
     display: none;
+    
 }
 
 .tab__content.is-active {
@@ -143,9 +165,10 @@
     font-family: $base-font-family;
     color: $black;
     line-height: calc(24 / 16);
+    line-break: strict;
 
     @include mq(md) {
-        flex: 1;
+        max-width: rem(490);
     }
 }
 
