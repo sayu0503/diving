@@ -187,20 +187,34 @@ $('.modal__overlay').on('click', function () {
 $(function () {
   const tabButton = $(".js-tab-button"),
         tabContent = $(".js-tab-content");
-// ページロード時のハッシュ処理
-  const hash = window.location.hash;
-  if (hash) {
-    const targetTab = $(hash);
-    if (targetTab.length) {
-      // タブの切り替え
-      tabButton.removeClass("is-active");
-      tabContent.removeClass("is-active");
 
-      const index = tabContent.index(targetTab);
-      tabButton.eq(index).addClass("is-active");
-      targetTab.addClass("is-active");
+  // ハッシュの処理を共通化する関数
+  function handleHashChange(hash) {
+    if (hash) {
+      const targetTab = $(hash); // ハッシュに対応するタブを取得
+      if (targetTab.length) {
+        // タブの切り替え
+        tabButton.removeClass("is-active");
+        tabContent.removeClass("is-active");
+
+        const index = tabContent.index(targetTab); // 対応するタブのインデックス取得
+        tabButton.eq(index).addClass("is-active");
+        targetTab.addClass("is-active");
+
+        // スクロール位置を調整
+        const offset = 220; // 上に空けたい余白（ピクセル単位）
+        $("html, body").animate(
+          { scrollTop: targetTab.offset().top - offset }, // 調整後のスクロール位置
+          300 // スクロールアニメーションの速度（ミリ秒）
+        );
+      }
     }
   }
+
+  // ページロード時のハッシュ処理
+  handleHashChange(window.location.hash);
+
+  // タブボタンのクリックイベント
   tabButton.on("click", function () {
     let index = tabButton.index(this);
     // タブ切り替え
@@ -208,6 +222,18 @@ $(function () {
     $(this).addClass("is-active");
     tabContent.removeClass("is-active");
     tabContent.eq(index).addClass("is-active");
+  });
+
+  // ページ内リンククリック時の処理
+  $("a[href^='#']").on("click", function (e) {
+    e.preventDefault(); // デフォルトのアンカーリンク動作を無効化
+    const targetHash = $(this).attr("href"); // クリックされたリンクのハッシュを取得
+    handleHashChange(targetHash); // ハッシュ処理を呼び出す
+  });
+
+  // ハッシュ変更時の処理（ブラウザの戻るボタンなどの対応）
+  $(window).on("hashchange", function () {
+    handleHashChange(window.location.hash);
   });
 });
 
@@ -223,7 +249,7 @@ $(function () {
 
 //FAQのアコーディオン
 $(document).ready(function () {
-  $('.accordion__content.current').each(function () {
+  $('.accordion__content').each(function () {
     $(this).show();
     $(this).prev('.accordion__header').addClass('is-open');
   });
