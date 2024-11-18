@@ -2,15 +2,35 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
   //ドロワーメニュー
-  $(".js-hamburger").click(function () {
-    if ($(".js-hamburger").hasClass("is-active")) {
+  $(".js-hamburger ").click(function () {
+    if ($(this).hasClass("is-active")) {
+      $(this).removeClass("is-active");
+      $(".js-sp-nav").fadeOut(300);
+      $(".header").removeClass("is-open");
+    } else {
+      $(this).addClass("is-active");
+      $(".js-sp-nav").fadeIn(300);
+      $(".header").addClass("is-open");
+    }
+  });
+
+  //メニュー内リンクのクリック処理
+  $(".js-sp-nav a").click(function (event) {
+    const target = $(this).attr("href");
+
+    if (target.startsWith("#")) {
+      event.preventDefault();
+      const position = $(target).offset().top;
+
+      $("html, body").animate({ scrollTop: position }, 500);
+
       $(".js-hamburger").removeClass("is-active");
       $(".js-sp-nav").fadeOut(300);
       $(".header").removeClass("is-open");
     } else {
-      $(".js-hamburger").addClass("is-active");
-      $(".js-sp-nav").fadeIn(300);
-      $(".header").addClass("is-open");
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-sp-nav").fadeOut(300);
+      $(".header").removeClass("is-open");
     }
   });
 
@@ -25,7 +45,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //ハンバーガーメニュー展開時背景をスクロールさせない方法
-  $(".js-hamburger").click(function () {
+  $(".js-hamburger .js-sp-nav").click(function () {
     if ($("body").css("overflow") === "hidden") {
       $("body").css({ height: "", overflow: "" });
     } else {
@@ -142,20 +162,21 @@ $(document).ready(function () {
   $('.js-modal-open').on('click', function (e) {
     e.preventDefault();
     const imgSrc = $(this).data('image');
-    $('.modal__image').attr('src', imgSrc);
     const imgIndex = $(this).data('index');
+
+    $('.modal__image').attr('src', imgSrc).css('opacity', '1');
     $('.js-modal').fadeIn();
-    $('.modal__image').css('opacity', '1');
     $('body').addClass('no-scroll');
+
     if (imgIndex === 1 || imgIndex === 6) {
-      $('.modal__content').css('width', '50vw');
+      $('.modal__content').css('width', '80vw');
     } else {
-      $('.modal__content').css('width', '100vw');
+      $('.modal__content').css('width', '90vw');
     }
   });
 });
 
-$('.js-modal-close').on('click', function () {
+$('.modal__overlay').on('click', function () {
   $('.js-modal').fadeOut(function () {
     $('.modal__image').css('opacity', '0');
   });
@@ -166,12 +187,12 @@ $('.js-modal-close').on('click', function () {
 $(function () {
   const tabButton = $(".js-tab-button"),
         tabContent = $(".js-tab-content");
-
+// ページロード時のハッシュ処理
   const hash = window.location.hash;
   if (hash) {
     const targetTab = $(hash);
     if (targetTab.length) {
-
+      // タブの切り替え
       tabButton.removeClass("is-active");
       tabContent.removeClass("is-active");
 
@@ -182,6 +203,7 @@ $(function () {
   }
   tabButton.on("click", function () {
     let index = tabButton.index(this);
+    // タブ切り替え
     tabButton.removeClass("is-active");
     $(this).addClass("is-active");
     tabContent.removeClass("is-active");

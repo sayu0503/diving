@@ -37,6 +37,7 @@
 
 .blog__contents {
     margin-top: rem(33);
+    padding-inline: rem(5);
 
     @include mq(md) {
         margin-top: rem(82);
@@ -45,7 +46,7 @@
 
 .blog-cards {
     display: grid;
-    gap: rem(43);
+    gap: rem(34);
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
 

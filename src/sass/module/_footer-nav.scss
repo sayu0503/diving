@@ -12,12 +12,6 @@
     }
 }
 
-.footer-nav__contents--gap {
-    @include mq(md) {
-        gap: rem(143);
-    }
-}
-
 .footer-nav__flex {
     display: flex;
     flex-direction: column;
@@ -28,12 +22,6 @@
         flex-direction: initial;
         gap: rem(117);
         padding-left: 0;
-    }
-}
-
-.footer-nav__flex--gap {
-    @include mq(md) {
-        gap: rem(143);
     }
 }
 
