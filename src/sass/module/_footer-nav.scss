@@ -12,6 +12,12 @@
     }
 }
 
+.footer-nav__contents--layout {
+    @include mq(md) {
+        gap: rem(143);
+    }
+}
+
 .footer-nav__flex {
     display: flex;
     flex-direction: column;
@@ -22,6 +28,12 @@
         flex-direction: initial;
         gap: rem(117);
         padding-left: 0;
+    }
+}
+
+.footer-nav__flex--layout {
+    @include mq(md) {
+        gap: rem(143);
     }
 }
 
@@ -115,6 +127,8 @@
     line-height: calc(18/16);
     color: $white;
     transition: opacity 0.4s;
+    @include mq(md){
+    }
 }
 
 @media (any-hover: hover) {
