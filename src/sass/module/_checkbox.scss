@@ -77,6 +77,7 @@
 
    @include mq(md) {
       max-width: none;
+      min-width: rem(373);
    }
 }
 

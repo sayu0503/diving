@@ -23,11 +23,9 @@
         left: calc(50% - min(48vw, rem(619)));
     }
 }
-
-.page-contact__content {
-    @include mq(md) {
-        width: 100%;
-        padding-inline: rem(190);
+.page-contact__inner.inner {
+    @include mq(md){
+        max-width: rem(753);
     }
 }
 
@@ -37,7 +35,7 @@
 
     @include mq(md) {
         display: grid;
-        grid-template-columns: rem(200) rem(480);
+        grid-template-columns: 200fr 480fr;
         gap: rem(20);
         padding-bottom: rem(40);
         margin-top: rem(16);

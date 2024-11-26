@@ -56,6 +56,16 @@
     }
 }
 
+.voice-cards--layout {
+    display: grid;
+    gap: rem(40);
+    grid-template-columns: 100%;
+    @include mq(md){
+       grid-template-columns: 1fr 1fr;
+       gap: rem(80) rem(40);
+    }
+}
+
 .voice__btn {
     margin-top: rem(39);
 

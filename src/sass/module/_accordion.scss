@@ -6,7 +6,6 @@
     gap: rem(40);
 
     @include mq(md) {
-        max-width: rem(700);
         width: 100%;
     }
 }
@@ -92,8 +91,4 @@
         padding: rem(39);
         margin-top: rem(16);
     }
-}
-
-.accordion__content.current {
-    display: block;
 }

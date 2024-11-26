@@ -225,8 +225,8 @@ $(function () {
 
   // ページ内リンククリック時の処理
   $("a[href^='#']").on("click", function (e) {
-    e.preventDefault(); // デフォルトのアンカーリンク動作を無効化
-    const targetHash = $(this).attr("href"); // クリックされたリンクのハッシュを取得
+    e.preventDefault();
+    const targetHash = $(this).attr("href");
     handleHashChange(targetHash); // ハッシュ処理を呼び出す
   });
 
@@ -250,7 +250,6 @@ $(function () {
 $(document).ready(function () {
   $('.accordion__content').each(function () {
     $(this).show();
-    $(this).prev('.accordion__header').addClass('is-open');
   });
   $('.accordion__header').click(function () {
     $(this).next('.accordion__content').slideToggle(200);

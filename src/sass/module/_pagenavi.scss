@@ -31,6 +31,13 @@
         opacity: 1;
     }
 }
+.wp-pagenavi--gap {
+    gap: rem(23);
+
+    @include mq(md) {
+        margin-left: rem(-32);
+    }
+}
 
 .wp-pagenavi span.current {
     color: #FFF;

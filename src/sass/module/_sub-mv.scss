@@ -4,16 +4,6 @@
     position: relative;
 }
 
-.sub-mv__image {
-    z-index: 1;
-    aspect-ratio: 375/460;
-
-    @include mq(md) {
-        aspect-ratio: 1440/548;
-    }
-
-}
-
 .sub-mv__image--height {
     height: rem(80);
 
@@ -33,7 +23,7 @@
 }
 
 .sub-mv__section-header {
-    font-weight: $normal;
+    font-weight: $regular;
     font-family: $fourth-font-family;
     color: $white;
     letter-spacing: 0;

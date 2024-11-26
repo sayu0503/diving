@@ -54,7 +54,18 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+.blog__cards--layout {
+    display: grid;
+    gap: rem(40);
+    margin-inline: rem(6);
 
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(40);
+        row-gap: rem(82);
+        margin-inline: 0;
+    }
+}
 .blog__btn {
     margin-top: rem(38);
 

@@ -14,7 +14,7 @@
     height: rem(55);
     top: rem(-24);
     left: calc(50% - min(48vw, rem(173)));
-    z-index: 2;
+    z-index: -1;
 
     @include mq(md) {
         width: rem(301);
@@ -29,19 +29,6 @@
         display: grid;
         gap: rem(80);
         grid-template-columns: 1fr rem(294);
-    }
-}
-
-.page-blog__cards {
-    display: grid;
-    gap: rem(40);
-    margin-inline: rem(6);
-
-    @include mq(md) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: rem(40);
-        row-gap: rem(82);
-        margin-inline: 0;
     }
 }
 

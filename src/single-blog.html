@@ -230,7 +230,7 @@
           </picture>
         </div>
         <div class="sub-mv__title">
-          <h1 class="sub-mv__section-header">Blog</h1>
+          <div class="sub-mv__section-header">Blog</div>
         </div>
       </div>
     </div>
@@ -246,22 +246,18 @@
     </div>
 
     <!-- 下層 Blog -->
-    <section class="layout-single-blog single-blog">
-      <div class="single-blog__inner inner">
-        <div class="single-blog__contents">
-          <div class="single-blog__body">
-            <div class="single-blog__box">
+    <section class="layout-blog page-blog">
+      <div class="page-blog__inner inner">
+        <div class="page-blog__contents">
+          <div class="single-blog">
               <time datetime="2023-11-17" class="single-blog__date">2023.11/17</time>
-              <h2 class="single-blog__title">ライセンス取得</h2>
+              <h1 class="single-blog__title">ライセンス取得</h1>
               <div class="single-blog__items">
                 <div class="single-blog__item">
-                  <div class="single-blog__image">
                     <img src="./assets/images/common/single-blog_img.jpg" alt="ピンクの珊瑚礁" decoding="async" loading="lazy"
                       width="1400" height="936">
-                  </div>
                   <div class="single-blog__content">
-                    <p class="single-blog__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     </p>
                   </div>
                 </div>
@@ -271,21 +267,18 @@
                       width="1400" height="936">
                   </div>
                   <div class="single-blog__content">
-                    <p class="single-blog__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     </p>
-                    <div class="single-blog__lists">
-                      <p class="single-blog__list">リスト１</p>
-                      <p class="single-blog__list">リスト2</p>
-                      <p class="single-blog__list">リスト3</p>
-                    </div>
-                    <p class="single-blog__text">
-                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    <ul>
+                      <li>リスト１</li>
+                      <li>リスト2</li>
+                      <li>リスト3</li>
+                    </ul>
+                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
 
             <!-- ページナビ -->
             <div class="single-blog__pagenavi pagenavi">
@@ -297,7 +290,7 @@
           </div>
 
           <!-- サイドバー -->
-          <div class="single-blog__sidebar sidebar">
+          <div class="page-blog__sidebar sidebar">
             <div class="sidebar__items">
               <div class="sidebar__item">
                 <h2 class="sidebar__title">人気記事</h2>
@@ -401,14 +394,31 @@
                 <div class="sidebar__archive">
                   <div class="sidebar__archive-group">
                     <h3 class="sidebar__archive-calendar js-accordion-title is-open">2023</h3>
-                    <ul class="sidebar__archive-months">
-                      <li class="sidebar__archive-month">3月</li>
-                      <li class="sidebar__archive-month">2月</li>
-                      <li class="sidebar__archive-month">1月</li>
-                    </ul>
+                    <div class="sidebar__archive-months">
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">3月</a>
+                      </li>
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">2月</a>
+                      </li>
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">1月</a>
+                      </li>
+                    </div>
                   </div>
                   <div class="sidebar__archive-group">
-                    <h3 class="sidebar__archive-calendar">2022</h3>
+                    <h3 class="sidebar__archive-calendar js-accordion-title">2022</h3>
+                    <div class="sidebar__archive-months">
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">3月</a>
+                      </li>
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">2月</a>
+                      </li>
+                      <li class="sidebar__archive-month">
+                        <a href="#" class="sidebar__archive-link">1月</a>
+                      </li>
+                    </div>
                   </div>
                 </div>
               </div>
