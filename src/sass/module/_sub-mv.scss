@@ -4,6 +4,13 @@
     position: relative;
 }
 
+.sub-mv__image img{
+    min-height: rem(460);
+    @include mq(md){
+        min-height: rem(548);
+    }
+}
+
 .sub-mv__image--height {
     height: rem(80);
 
