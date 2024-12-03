@@ -28,7 +28,7 @@
    background: $white;
 
    @include mq(md) {
-      top: 46%;
+      top: 57%;
    }
 }
 
@@ -55,7 +55,7 @@
    border: none;
 
    @include mq(md) {
-      top: 35%;
+      top: 46%;
       left: rem(2);
    }
 }
