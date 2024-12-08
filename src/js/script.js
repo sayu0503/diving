@@ -158,29 +158,36 @@ box.each(function () {
 });
 
 //モーダルウィンドウ
-$(document).ready(function () {
-  $('.js-modal-open').on('click', function (e) {
-    e.preventDefault();
-    const imgSrc = $(this).data('image');
-    const imgIndex = $(this).data('index');
+const galleryItems = document.querySelectorAll(".js-modal-open");
+const modal = document.querySelector(".js-modal");
+const modalImage = document.querySelector(".js-modal-img");
 
-    $('.modal__image').attr('src', imgSrc).css('opacity', '1');
-    $('.js-modal').fadeIn();
-    $('body').addClass('no-scroll');
+// 各ギャラリーアイテムにクリックイベントを設定
+galleryItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    const img = item.querySelector("img");
+    const imgSrc = img.getAttribute("src");
 
-    if (imgIndex === 1 || imgIndex === 6) {
-      $('.modal__content').css('width', '80vw');
-    } else {
-      $('.modal__content').css('width', '90vw');
-    }
+    // モーダルの画像をクリックされた画像に設定
+    modalImage.setAttribute("src", imgSrc);
+
+    // モーダルを表示するクラスを追加
+    modal.classList.add("is-open");
+
+    // モーダルが開いている間はスクロールを無効に
+    document.body.classList.add("no-scroll");
   });
 });
 
-$('.modal__overlay').on('click', function () {
-  $('.js-modal').fadeOut(function () {
-    $('.modal__image').css('opacity', '0');
-  });
-  $('body').removeClass('no-scroll');
+// モーダル全体をクリックで閉じる処理
+modal.addEventListener("click", function (e) {
+  // モーダル内の画像をクリックした場合は閉じない
+  if (!e.target.closest(".js-modal-img")) {
+    modal.classList.remove("is-open");
+
+    // モーダルを閉じたらスクロールを有効に戻す
+    document.body.classList.remove("no-scroll");
+  }
 });
 
 //タブ
