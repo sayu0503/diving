@@ -158,35 +158,17 @@ box.each(function () {
 });
 
 //モーダルウィンドウ
-const galleryItems = document.querySelectorAll(".js-modal-open");
-const modal = document.querySelector(".js-modal");
-const modalImage = document.querySelector(".js-modal-img");
-
-// 各ギャラリーアイテムにクリックイベントを設定
-galleryItems.forEach(function (item) {
-  item.addEventListener("click", function () {
-    const img = item.querySelector("img");
-    const imgSrc = img.getAttribute("src");
-
-    // モーダルの画像をクリックされた画像に設定
-    modalImage.setAttribute("src", imgSrc);
-
-    // モーダルを表示するクラスを追加
-    modal.classList.add("is-open");
-
-    // モーダルが開いている間はスクロールを無効に
-    document.body.classList.add("no-scroll");
-  });
+$(".js-modal-open").on("click", function () {
+  const imgSrc = $(this).find("img").attr("src");
+  $(".js-modal-img").attr("src", imgSrc);
+  $(".js-modal").addClass("is-open");
+  $("body").addClass("no-scroll");
 });
 
-// モーダル全体をクリックで閉じる処理
-modal.addEventListener("click", function (e) {
-  // モーダル内の画像をクリックした場合は閉じない
-  if (!e.target.closest(".js-modal-img")) {
-    modal.classList.remove("is-open");
-
-    // モーダルを閉じたらスクロールを有効に戻す
-    document.body.classList.remove("no-scroll");
+$(".js-modal").on("click", function (e) {
+  if (!$(e.target).closest(".js-modal-img").length) {
+    $(this).removeClass("is-open");
+    $("body").removeClass("no-scroll");
   }
 });
 
