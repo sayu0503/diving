@@ -61,10 +61,10 @@
 }
 
 .single-blog__container p {
+    color: $green;
     font-size: rem(16);
     font-weight: $regular;
     font-family: $base-font-family;
-    color: $green;
     line-height: calc(24  / 16);
 }
 
