@@ -89,6 +89,17 @@
     }
 }
 
+/* プリロード用のスタイル */
+.tab__button--whale::before,
+.tab__button--shark::before,
+.tab__button--small-fish::before {
+    content: "";
+    display: none; /* 非表示にする */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/common/whale-white.png), url(../images/common/shark-white.png), url(../images/common/small-fish-white.png);
+}
+
 
 .tab__button.is-active {
     cursor: pointer;
@@ -128,6 +139,8 @@
         margin-top: rem(24);
     }
 }
+
+
 
 .tab__content {
     border: 1px solid $green-accent;
