@@ -119,6 +119,7 @@
     justify-content: center;
 
     @include mq(md) {
+        text-align: left;
         padding-left: rem(15);
         justify-content: flex-start;
     }
