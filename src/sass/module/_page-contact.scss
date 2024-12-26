@@ -25,7 +25,7 @@
 }
 .page-contact__inner.inner {
     @include mq(md){
-        max-width: rem(750);
+        max-width: 700px + strip-unit($padding-pc) * 2;
     }
 }
 
